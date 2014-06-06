@@ -1,0 +1,16 @@
+.l-primary-column
+  width: $primary-column-w
+
+.l-secondary-column
+  width $secondary-column-width
+
+
+if $sticky-footer == true
+  .flexbox.cssvhunit &
+    body
+      display flex
+      flex-direction column
+      min-height 100vh
+
+    .l-main
+      flex 1
