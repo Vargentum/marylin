@@ -1,0 +1,78 @@
+/*--------------------------------------
+  Compact cart view at header
+--------------------------------------*/
+.cart--S
+  position relative
+  hLine middle
+  padding-left: 25px
+  margin-left: 15px
+
+  //custom border
+  &:before
+    p-ctr(y)
+    left 0
+    sprite $cart-compact-brdr
+
+  .cart__main
+    margin-top: -10px
+    &>*
+      margin-top: 5px
+
+
+  .cart__title
+    brand 21px
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+  .cart__submit
+    margin-left: 10px
+
+/*--------------------------------------
+  Complete cart view (table)
+--------------------------------------*/
+.cart--L
+  width: 100%;
+  border-collapse collapse
+  background-color: #fff
+  margin-bottom: 20px
+
+  th,td
+    position relative
+    text-align: left;
+    vertical-align: middle;
+    padding: 15px 5px
+
+    &:first-child
+      padding-left: 15px
+
+    &:last-child
+      padding-right: 15px
+
+    &:before
+      pb(left top 100%)
+      size 100% 4px
+      background: linear-gradient(to bottom, rgba(181,181,181,1) 0%,rgba(192,192,192,1) 6%,rgba(209,209,209,1) 18%,rgba(213,213,213,1) 24%,rgba(222,222,222,1) 29%,rgba(232,232,232,1) 41%,rgba(241,241,241,1) 65%,rgba(247,247,247,1) 100%);
+
+  th
+    padding-top: 10px
+    padding-bottom: 10px
+    title 15px #797f7f;
+    font-style: italic;
+    background-color: #e8e8e8;
+    background-image: linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+
+    &:before
+      height: 18px
+
+
+
+.cart__total
+  title 17px $base-font-c
+  font-style: italic
+  margin: 25px 0
+
+  b
+    font-weight: 700;
+    font-style normal
+
+  &>*
+    margin-bottom: 8px

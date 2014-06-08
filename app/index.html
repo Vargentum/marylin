@@ -42,7 +42,7 @@
         <a class="address__email" href="#">название@домен.рф</a>
       </address>
       <!--cart-->
-      <div class="cart--compact">
+      <div class="cart--S">
         <div class="cart__main">
           <h2 class="cart__title">Ваша корзина:</h2>
           <p>Товаров: 12</p>
@@ -72,6 +72,7 @@
 
   <!--include "templates/main"-->
   <!--include "templates/product"-->
+  <!--include "templates/product-list"-->
   <div class="l-main__inner">
 
     <!--sidebar-->
@@ -145,259 +146,89 @@
 
       <section>
         <header>
-          <h2 class="main__title">Меховые жилетки</h2>
-
-          <div class="uv-tabs  filter">
-
-            <ul class="uv-tabs__nav  filter__nav">
-              <li><b>Сортировать по:</b></li>
-              <li><a href="#">Названию</a></li>
-              <li><a href="#">Цене</a></li>
-            </ul>
-
-            <ul>
-              <li class="uv-tabs__item">
-                <div class="l-jLine">
-                  <div class="l-hLine">
-                    <b>Размеры:</b>
-                    <ul class="filter__options-list">
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>42</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>44</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>46</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>48</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>50</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>52</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>54</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>56</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox"/>
-                          <span>58</span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                  <label class="filter__option--visible-on-page">
-                    <b>На странице</b>
-                    <select>
-                      <option value="">10</option>
-                      <option value="">50</option>
-                      <option value="">100</option>
-                    </select>
-                  </label>
-                </div>
-              </li>
-              <li class="uv-tabs__item">
-                2
-              </li>
-            </ul>
-          </div>
-
+          <h2 class="main__title">Моя корзина</h2>
         </header>
 
-        <ul class="product-list">
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
+        <table class="cart--L">
+          <tr>
+            <th>Наименование</th>
+            <th>Цена, руб</th>
+            <th>Скидка</th>
+            <th colspan="2">Стоимость, руб</th>
+          </tr>
+          <tr class="product--in-cart">
+            <td>
+              <div class="product__description">
+                <div class="product__photo">
+                  <img src="http://fakeimg.pl/100x100/?text=100x100">
+                </div>
+                <div class="product__description__main">
+                  <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                  <p>Размер 42</p>
                 </div>
               </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
+            </td>
+            <td>
+              <b class="product__price">119 499 руб.</b>
+              <div class="product__quantity" >
+                <p>Кол-во:</p>
+                <input type="number" value="1"/>
+              </div>
+            </td>
+            <td>
+              <b class="product__price  product__price--discount">0.р</b>
+            </td>
+            <td>
+              <b class="product__price  product__price--total">119 499 руб</b>
+            </td>
+            <td>
+              <a href="#" class="uv-btn--delete">Delete item</a>
+            </td>
+          </tr>
+          <tr class="product--in-cart">
+            <td>
+              <div class="product__description">
+                <div class="product__photo">
+                  <img src="http://fakeimg.pl/100x100/?text=100x100">
+                </div>
+                <div class="product__description__main">
+                  <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                  <p>Размер 42</p>
                 </div>
               </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
+            </td>
+            <td>
+              <b class="product__price">119 499 руб.</b>
+              <div class="product__quantity" >
+                <p>Кол-во:</p>
+                <input type="number" value="1"/>
               </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="product  product--S">
-              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
-              <div class="product__main">
-                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <div class="product__footer">
-                  <b class="product__price">135 000 руб.</b>
-                  <div class="product__buy-btn">
-                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </li>
-        </ul>
+            </td>
+            <td>
+              0 р.
+            </td>
+            <td>
+              <b class="product__price  product__price--total">119 499 руб</b>
+            </td>
+            <td>
+              <a href="#" class="uv-btn--delete">Delete item</a>
+            </td>
+          </tr>
+        </table>
 
-        <footer>
-
-          <nav class="pagination">
-            <a class="uv-btn  uv-btn--l  pagination__control" href="#">Предыдущая</a>
-            <ul class="pagination__list">
-              <li><a class="uv-btn  pagination__btn  is-active" href="#">1</a></li>
-              <li><a class="uv-btn  pagination__btn" href="#">2</a></li>
-              <li><a class="uv-btn  pagination__btn" href="#">3</a></li>
-              <li><a class="uv-btn  pagination__btn" href="#">4</a></li>
-              <li><a class="uv-btn  pagination__btn" href="#">5</a></li>
-              <li><a class="uv-btn  pagination__btn" href="#">6</a></li>
-            </ul>
-            <a class="uv-btn  uv-btn--r  pagination__control" href="#">Следующая</a>
-          </nav>
-
-          <br/>
-          <br/>
-
-          <article>
-            <header>
-              <h2 class="main__title">Жилет из меха чернобурки</h2>
-            </header>
-            <p>Меховые жилеты приобрели необычайную популярность несколько лет назад, хотя особо они никогда из моды и не выходили. И первым подобным аксессуаром обзавелись еще наши прапращуры, обитавшие в пещерах. Это совсем не удивительно, ведь натуральный мех - самая теплая одежда. Сегодня, при виде изящных женских силуэтов, закутанных в жилетки из меха чернобурки,  ассоциации с древними людьми никого не посещают, скорее мы вспоминаем царственных особ и приближенных к ним особ. Вы решили купить себе жилет из чернобурки, чтобы выглядеть по-королевски? Тогда научитесь определять качество меха и выбирать подходящий фасон.</p>
-          </article>
+        <footer class="cart__total">
+          <header>
+            <h3><b>Итого:</b></h3>
+          </header>
+          <p>Товаров: <b>2</b></p>
+          <p>Сумма: <b>238 569 руб.</b></p>
+          <p>Скидка: <b>0 руб.</b></p>
         </footer>
+        <p><a href="#" class="uv-btn--brand">Оформить заказ</a></p>
+
+        <br/>
+        <br/>
+        <p><a href="#" class="uv-btn  uv-btn--l">Вернуться к списку товаров</a></p>
 
       </section>
 

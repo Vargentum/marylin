@@ -1,0 +1,100 @@
+<div class="l-main__inner">
+
+  include "../components/sidebar"
+
+  <!--main column-->
+  <div class="l-column--primary">
+
+    include "../components/crumbs"
+
+    <section>
+      <header>
+        <h2 class="main__title">Моя корзина</h2>
+      </header>
+
+      <table class="cart--L">
+        <tr>
+          <th>Наименование</th>
+          <th>Цена, руб</th>
+          <th>Скидка</th>
+          <th colspan="2">Стоимость, руб</th>
+        </tr>
+        <tr class="product--in-cart">
+          <td>
+            <div class="product__description">
+              <div class="product__photo">
+                <img src="http://fakeimg.pl/100x100/?text=100x100">
+              </div>
+              <div class="product__description__main">
+                <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                <p>Размер 42</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <b class="product__price">119 499 руб.</b>
+            <div class="product__quantity" >
+              <p>Кол-во:</p>
+              <input type="number" value="1"/>
+            </div>
+          </td>
+          <td>
+            <b class="product__price  product__price--discount">0.р</b>
+          </td>
+          <td>
+            <b class="product__price  product__price--total">119 499 руб</b>
+          </td>
+          <td>
+            <a href="#" class="uv-btn--delete">Delete item</a>
+          </td>
+        </tr>
+        <tr class="product--in-cart">
+          <td>
+            <div class="product__description">
+              <div class="product__photo">
+                <img src="http://fakeimg.pl/100x100/?text=100x100">
+              </div>
+              <div class="product__description__main">
+                <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                <p>Размер 42</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <b class="product__price">119 499 руб.</b>
+            <div class="product__quantity" >
+              <p>Кол-во:</p>
+              <input type="number" value="1"/>
+            </div>
+          </td>
+          <td>
+            0 р.
+          </td>
+          <td>
+            <b class="product__price  product__price--total">119 499 руб</b>
+          </td>
+          <td>
+            <a href="#" class="uv-btn--delete">Delete item</a>
+          </td>
+        </tr>
+      </table>
+
+      <footer class="cart__total">
+        <header>
+          <h3><b>Итого:</b></h3>
+        </header>
+        <p>Товаров: <b>2</b></p>
+        <p>Сумма: <b>238 569 руб.</b></p>
+        <p>Скидка: <b>0 руб.</b></p>
+      </footer>
+      <p><a href="#" class="uv-btn--brand">Оформить заказ</a></p>
+
+      <br/>
+      <br/>
+      <p><a href="#" class="uv-btn  uv-btn--l">Вернуться к списку товаров</a></p>
+
+    </section>
+
+  </div>
+
+</div>

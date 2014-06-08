@@ -230,6 +230,49 @@ for $each in $product-share-link-types
 
 
 /*--------------------------------------
+  Product in cart view (at cart page)
+--------------------------------------*/
+.product--in-cart
+
+  .product__photo
+    @extend .product__gallery__photo
+    @extend .product__gallery__photo-list--S .product__gallery__photo
+    display inline-block
+
+  .product__description
+    width: 330px
+    jLine middle
+
+  .product__description__main
+
+    .flexbox &
+      flex 1
+      padding-left: 10px
+
+    .no-flexbox &
+      width: (330px - 100px - 10px);
+
+  .product__price
+    font-size: 14px
+
+  .product__discount
+    @extend .product__price
+
+  .product__price--total
+    font-size: 17px
+
+  .product__quantity
+    color: #999;
+    padding-top: 3px
+
+    input
+      display block
+      margin-top: 5px
+      width: 60px
+      font-size: 14px
+      font-weight: 700
+
+/*--------------------------------------
   product list
 --------------------------------------*/
 .product-list
