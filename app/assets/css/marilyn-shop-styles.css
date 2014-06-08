@@ -1128,6 +1128,140 @@ a:focus {
   left: 0;
   top: 0;
 }
+.news-preview {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+}
+.news-preview a,
+.news-preview a:hover,
+.news-preview a:focus,
+.news-preview a:active,
+.news-preview a:visited {
+  color: inherit;
+}
+.news-preview__title {
+  font-style: normal;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcsAAAAFCAYAAAAql8c3AAAAZUlEQVRo3u3XIQ6AIBSAYU+CV6R5Nw0eSosJCS8QMLlR+L7tl2BjgzeWLedU22tXrGkBgEl152L9HLXSdNoqAGbVnYsxOYs0MseRHxeZM6TRPV6WAND4elmm+HHHutoqAGbVm4svYuU0TKsoYx8AAAAASUVORK5CYII=");
+  background-position: 50% 18px;
+  background-repeat: no-repeat;
+  font: 32px 'Forum', cursive;
+}
+.news-preview__title,
+.news-preview__title:hover,
+.news-preview__title:focus,
+.news-preview__title:active,
+.news-preview__title:visited {
+  color: #3a3229;
+}
+.news-preview__title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  position: static;
+  margin: 5px auto;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -9px -29px;
+  width: 63px;
+  height: 25px;
+}
+.news-preview__article {
+  position: relative;
+  margin-bottom: 15px;
+}
+.news-preview__article__title {
+  font-size: 18px;
+}
+.news-preview__article__title,
+.news-preview__article__title:hover,
+.news-preview__article__title:focus,
+.news-preview__article__title:active,
+.news-preview__article__title:visited {
+  color: #b34040;
+}
+.news-preview__article__body {
+  font-style: normal;
+  font: 13px 'Open Sans', sans-serif;
+  margin-top: 5px;
+}
+.news-preview__article__body,
+.news-preview__article__body:hover,
+.news-preview__article__body:focus,
+.news-preview__article__body:active,
+.news-preview__article__body:visited {
+  color: #797f7f;
+}
+.news-preview__footer {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.news-preview__footer,
+.news-preview__footer:hover,
+.news-preview__footer:focus,
+.news-preview__footer:active,
+.news-preview__footer:visited {
+  color: #b34040;
+}
+/*--------------------------------------
+  main page view
+--------------------------------------*/
+.news-preview--main-page {
+  width: 460px;
+}
+.news-preview--main-page,
+.news-preview--main-page:hover,
+.news-preview--main-page:focus,
+.news-preview--main-page:active,
+.news-preview--main-page:visited {
+  color: #bababa;
+}
+.news-preview--main-page *,
+.news-preview--main-page *:hover,
+.news-preview--main-page *:focus,
+.news-preview--main-page *:active,
+.news-preview--main-page *:visited {
+  color: inherit;
+}
+.news-preview--main-page .news-preview__title,
+.news-preview--main-page .news-preview__title:hover,
+.news-preview--main-page .news-preview__title:focus,
+.news-preview--main-page .news-preview__title:active,
+.news-preview--main-page .news-preview__title:visited {
+  color: #f1f3f3;
+}
+.news-preview--main-page .news-preview__article {
+  margin-bottom: 0;
+}
+.news-preview--main-page .news-preview__article:after {
+  content: '';
+  display: block;
+  position: absolute;
+  position: static;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -74px -42px;
+  width: 70px;
+  height: 8px;
+  margin: 15px auto;
+}
+li:last-child .news-preview--main-page .news-preview__article:after {
+  display: none;
+}
+.news-preview--main-page .news-preview__article__title,
+.news-preview--main-page .news-preview__article__title:hover,
+.news-preview--main-page .news-preview__article__title:focus,
+.news-preview--main-page .news-preview__article__title:active,
+.news-preview--main-page .news-preview__article__title:visited {
+  color: #f1f4f4;
+}
+/*--------------------------------------
+  articles list view
+--------------------------------------*/
+.news-preview--articles-list {
+  text-align: left;
+}
+.news-preview--articles-list time {
+  font: normal 12px 'Open Sans', sans-serif;
+}
 .pagination,
 .pagination__list {
   margin-left: -7px;
@@ -1623,7 +1757,7 @@ a:focus {
 .main__title {
   font: 32px 'Forum', cursive;
   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .main__title,
 .main__title:hover,
@@ -1631,116 +1765,6 @@ a:focus {
 .main__title:active,
 .main__title:visited {
   color: #3a3229;
-}
-.news-preview {
-  text-align: center;
-  font-family: 'PT Serif', serif;
-  font-style: italic;
-}
-.news-preview a,
-.news-preview a:hover,
-.news-preview a:focus,
-.news-preview a:active,
-.news-preview a:visited {
-  color: inherit;
-}
-.news-preview__title {
-  font-style: normal;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcsAAAAFCAYAAAAql8c3AAAAZUlEQVRo3u3XIQ6AIBSAYU+CV6R5Nw0eSosJCS8QMLlR+L7tl2BjgzeWLedU22tXrGkBgEl152L9HLXSdNoqAGbVnYsxOYs0MseRHxeZM6TRPV6WAND4elmm+HHHutoqAGbVm4svYuU0TKsoYx8AAAAASUVORK5CYII=");
-  background-position: 50% 18px;
-  background-repeat: no-repeat;
-  font: 32px 'Forum', cursive;
-}
-.news-preview__title,
-.news-preview__title:hover,
-.news-preview__title:focus,
-.news-preview__title:active,
-.news-preview__title:visited {
-  color: #3a3229;
-}
-.news-preview__title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  position: static;
-  margin: 5px auto;
-  background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -9px -29px;
-  width: 63px;
-  height: 25px;
-}
-.news-preview__article {
-  position: relative;
-  margin-bottom: 15px;
-}
-.news-preview__article__title {
-  font-size: 18px;
-}
-.news-preview__article__title,
-.news-preview__article__title:hover,
-.news-preview__article__title:focus,
-.news-preview__article__title:active,
-.news-preview__article__title:visited {
-  color: #b34040;
-}
-.news-preview__footer {
-  margin-top: 15px;
-  font-size: 15px;
-}
-.news-preview__footer,
-.news-preview__footer:hover,
-.news-preview__footer:focus,
-.news-preview__footer:active,
-.news-preview__footer:visited {
-  color: #b34040;
-}
-.news-preview--main-page {
-  width: 460px;
-}
-.news-preview--main-page,
-.news-preview--main-page:hover,
-.news-preview--main-page:focus,
-.news-preview--main-page:active,
-.news-preview--main-page:visited {
-  color: #bababa;
-}
-.news-preview--main-page *,
-.news-preview--main-page *:hover,
-.news-preview--main-page *:focus,
-.news-preview--main-page *:active,
-.news-preview--main-page *:visited {
-  color: inherit;
-}
-.news-preview--main-page .news-preview__title,
-.news-preview--main-page .news-preview__title:hover,
-.news-preview--main-page .news-preview__title:focus,
-.news-preview--main-page .news-preview__title:active,
-.news-preview--main-page .news-preview__title:visited {
-  color: #f1f3f3;
-}
-.news-preview--main-page .news-preview__article {
-  margin-bottom: 0;
-}
-.news-preview--main-page .news-preview__article:after {
-  content: '';
-  display: block;
-  position: absolute;
-  position: static;
-  background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -74px -42px;
-  width: 70px;
-  height: 8px;
-  margin: 15px auto;
-}
-li:last-child .news-preview--main-page .news-preview__article:after {
-  display: none;
-}
-.news-preview--main-page .news-preview__article__title,
-.news-preview--main-page .news-preview__article__title:hover,
-.news-preview--main-page .news-preview__article__title:focus,
-.news-preview--main-page .news-preview__article__title:active,
-.news-preview--main-page .news-preview__article__title:visited {
-  color: #f1f4f4;
 }
 .product-catalog a {
   display: block;

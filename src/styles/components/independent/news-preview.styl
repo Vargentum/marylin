@@ -1,3 +1,6 @@
+/*--------------------------------------
+  base view (at sidebar)
+--------------------------------------*/
 .news-preview
   text-align: center;
   font-family: $title-f;
@@ -27,13 +30,22 @@
   font-size: 18px
   color $title-c
 
+
+.news-preview__article__body
+  font-style normal
+  font: $base-f-size $base-f
+  color: #797f7f;
+  margin-top: 5px
+
 .news-preview__footer
   margin-top: 15px
   font-size: 15px
   color: $title-c;
 
 
-
+/*--------------------------------------
+  main page view
+--------------------------------------*/
 .news-preview--main-page
   width: 460px
   color: #bababa;
@@ -60,3 +72,13 @@
 
   .news-preview__article__title
     color: #f1f4f4;
+
+
+/*--------------------------------------
+  articles list view
+--------------------------------------*/
+.news-preview--articles-list
+  text-align: left;
+
+  time
+    font: normal 12px $base-f
