@@ -1,0 +1,31 @@
+.l-footer
+  position: relative;
+  img('bg-footer.png')
+  padding: 20px 0
+
+  &:before
+    pb(left top)
+    @extend .pattern-ornament
+
+.l-footer__inner
+  container()
+  jLine top
+  margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
+.l-footer__column
+  position relative
+  padding-right: 20px
+
+  .flexbox &
+    flex 1
+
+  .no-flexbox &
+    width: 25%
+
+
+
+
+

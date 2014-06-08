@@ -1,0 +1,24 @@
+.cart--compact
+  position relative
+  hLine middle
+  padding-left: 25px
+  margin-left: 15px
+
+  //custom border
+  &:before
+    p-ctr(y)
+    left 0
+    sprite $cart-compact-brdr
+
+  .cart__main
+    margin-top: -10px
+    &>*
+      margin-top: 5px
+
+
+.cart__title
+  brand 21px
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+.cart__submit
+  margin-left: 10px

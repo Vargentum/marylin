@@ -60,7 +60,7 @@ module.exports = (grunt) ->
           "<%= project.src %>/styles/base/reset.styl"
           "<%= project.src %>/styles/base/defaults.styl"
           "<%= project.src %>/styles/base/layout.styl"
-          "<%= project.src %>/styles/components/{,*/}*.styl"
+          "<%= project.src %>/styles/components/{,**/}*.styl"
         ]
         dest: "<%= project.temp %>/temp-styles.styl"
 
