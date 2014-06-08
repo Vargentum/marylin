@@ -1,0 +1,49 @@
+.filter
+  position relative
+  background-color: #f1f2f2
+  border 3px solid @background-color
+  padding: 10px 15px
+  margin: 10px 0 20px
+
+  &:before
+    pb(left top)
+    size 100%
+    pattern(.22)
+
+  &>*
+    position relative
+    z-index: 1;
+
+  b
+    font-weight: 700;
+
+.filter__nav
+  hLine middle
+  margin-bottom: 10px
+
+  li:first-child
+    margin-right: 10px
+
+  a
+    padding: 2px 15px 3px
+    border-radius: 15px;
+
+    &.current
+      background-color: #bababa;
+      box-shadow: inset 0 4px 7px rgba(0,0,0,.12);
+      color $base-font-c
+      text-decoration: none;
+
+
+
+.filter__options-list
+  hLine()
+  &>*
+    margin-left: 10px
+
+.filter__option--visible-on-page
+  hLine middle 5px
+  font-weight: 700
+
+  select
+    width: 60px

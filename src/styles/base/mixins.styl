@@ -110,10 +110,13 @@ title($size, $color = $title-c)
 /*--------------------------------------
     Layout helpers
 --------------------------------------*/
-hLine($align = baseline)
+hLine($align = baseline, $gutter = 0)
+  margin-left: -($gutter);
   &>*
     display: inline-block
     vertical-align: $align
+    margin-left: $gutter;
+
 
   if $align == none
     &>*

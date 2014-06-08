@@ -48,7 +48,7 @@
           <p>Товаров: 12</p>
           <p>Сумма: 134 500 руб.</p>
         </div>
-        <a href="#" class="uv-btn  cart__submit"><span>Оформить</span></a>
+        <a href="#" class="uv-btn--brand  cart__submit"><span>Оформить</span></a>
       </div>
     </div>
   </div>
@@ -71,6 +71,7 @@
 <main class="l-main">
 
   <!--include "templates/main"-->
+  <!--include "templates/product"-->
   <div class="l-main__inner">
 
     <!--sidebar-->
@@ -142,99 +143,260 @@
         </ul>
       </nav>
 
-      <section class="product  product--full">
-        <div class="l-jLine--top">
-          <aside class="product__layout--l  product__gallery">
-            <ul class="product__gallery__photo-list--L">
-              <li class="product__gallery__photo  is-active"><img src="http://fakeimg.pl/320x470/?text=320x470(1)"></li>
-              <li class="product__gallery__photo"><img src="http://fakeimg.pl/320x470/?text=320x470(2)"></li>
-              <li class="product__gallery__photo"><img src="http://fakeimg.pl/320x470/?text=320x470(3)"></li>
-            </ul>
-            <ul class="product__gallery__photo-list--S">
-              <li class="product__gallery__photo"><img src="http://fakeimg.pl/100x100/?text=100x100(1)"></li>
-              <li class="product__gallery__photo"><img src="http://fakeimg.pl/100x100/?text=100x100(2)"></li>
-              <li class="product__gallery__photo"><img src="http://fakeimg.pl/100x100/?text=100x100(3)"></li>
-            </ul>
-          </aside>
-          <div class="product__layout--r">
-            <header>
-              <h2 class="product__title">Жилет из меха лисы, 3/4 поп. рукав</h2>
-            </header>
-            <div class="product__size">
-              <label>
-                <b>Размер:</b>
-                <select>
-                  <option value="">42</option>
-                  <option value="">43</option>
-                  <option value="">44</option>
-                  <option value="">45</option>
-                  <option value="">46</option>
-                  <option value="">47</option>
-                  <option value="">48</option>
-                </select>
-              </label>
-              <a href="#">Таблица размеров</a>
-            </div>
-            <ul class="product__params">
-              <li>Модель: <b>Жилет из меха лисы, 3/4 поп. рукав (1196)</b></li>
-              <li>Производитель: <b>Россия</b></li>
-              <li>Длина: <b>70 см.</b></li>
-              <li>Размер: <b>42-48</b></li>
-              <li>Рост модели: <b>174 см</b></li>
-              <li>Тип застежки: <b>молния</b></li>
-            </ul>
-            <b class="product__price">Цена: 135 000 руб.</b>
-            <div class="product__buy-btn">
-              <a href="#" class="uv-btn"><span>В корзину</span></a>
-            </div>
+      <section>
+        <header>
+          <h2 class="main__title">Меховые жилетки</h2>
 
-            <ul class="product__share">
-              <li>Поделиться:</li>
-              <li><a href="#" class="product__share__link--vk" title="Вконтакте"></a></li>
-              <li><a href="#" class="product__share__link--fb" title="Facebook"></a></li>
-              <li><a href="#" class="product__share__link--tw" title="Twitter"></a></li>
-              <li><a href="#" class="product__share__link--mm" title="Мой мир"></a></li>
-              <li><a href="#" class="product__share__link--ya" title="Яндекс"></a></li>
-              <li><a href="#" class="product__share__link--lj" title="LiveJournal"></a></li>
+          <div class="uv-tabs  filter">
+
+            <ul class="uv-tabs__nav  filter__nav">
+              <li><b>Сортировать по:</b></li>
+              <li><a href="#">Названию</a></li>
+              <li><a href="#">Цене</a></li>
+            </ul>
+
+            <ul>
+              <li class="uv-tabs__item">
+                <div class="l-jLine">
+                  <div class="l-hLine">
+                    <b>Размеры:</b>
+                    <ul class="filter__options-list">
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>42</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>44</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>46</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>48</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>50</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>52</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>54</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>56</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="checkbox"/>
+                          <span>58</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <label class="filter__option--visible-on-page">
+                    <b>На странице</b>
+                    <select>
+                      <option value="">10</option>
+                      <option value="">50</option>
+                      <option value="">100</option>
+                    </select>
+                  </label>
+                </div>
+              </li>
+              <li class="uv-tabs__item">
+                2
+              </li>
             </ul>
           </div>
-        </div>
+
+        </header>
+
+        <ul class="product-list">
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха серебристо-черной лисы</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product  product--S">
+              <img class="product__photo" src="http://fakeimg.pl/220x320/?text=220x320">
+              <div class="product__main">
+                <h3 class="product__title"><a href="#">Шуба из меха</a></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="product__footer">
+                  <b class="product__price">135 000 руб.</b>
+                  <div class="product__buy-btn">
+                    <a href="#" class="uv-btn--brand"><span>В корзину</span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
 
         <footer>
 
-          <div class="uv-tabs">
-
-            <ul class="uv-tabs__nav">
-              <li><a href="#">Описание</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Оплата и возврат</a></li>
-              <li><a href="#">Отзывы</a></li>
+          <nav class="pagination">
+            <a class="uv-btn  uv-btn--l  pagination__control" href="#">Предыдущая</a>
+            <ul class="pagination__list">
+              <li><a class="uv-btn  pagination__btn  is-active" href="#">1</a></li>
+              <li><a class="uv-btn  pagination__btn" href="#">2</a></li>
+              <li><a class="uv-btn  pagination__btn" href="#">3</a></li>
+              <li><a class="uv-btn  pagination__btn" href="#">4</a></li>
+              <li><a class="uv-btn  pagination__btn" href="#">5</a></li>
+              <li><a class="uv-btn  pagination__btn" href="#">6</a></li>
             </ul>
+            <a class="uv-btn  uv-btn--r  pagination__control" href="#">Следующая</a>
+          </nav>
 
-            <ul content="uv-tabs__item-wrap">
-              <li class="uv-tabs__item">
-                <b>1</b>
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-              </li>
-              <li class="uv-tabs__item">
-                <b>2</b>
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-              </li>
-              <li class="uv-tabs__item">
-                <b>3</b>
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-              </li>
-              <li class="uv-tabs__item">
-                <b>4</b>
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-                Жилет из яркого лисьего меха, отличный осенне-зимний вариант! Изделие удлинённое, с высоким воротником-стойкой. Имеет втачной полуоблегающий рукав длины 3/4. Жилет выполнен из цельных поперечных шкур лисы, застёгивается на золотистую молнию, обрамлённую натуральной замшей. Модель дополняет замшевый широкий поясок песочного-рыжего оттенка. Также имеются втачные кармашки, которые незаметны под слоем пышного меха.  Жилет гармонично сочетается с брючным низом и водолазками.
-              </li>
-            </ul>
-          </div>
+          <br/>
+          <br/>
 
-          <a href="#" class="uv-btn--back">Вернуться к списку товаров</a>
-
+          <article>
+            <header>
+              <h2 class="main__title">Жилет из меха чернобурки</h2>
+            </header>
+            <p>Меховые жилеты приобрели необычайную популярность несколько лет назад, хотя особо они никогда из моды и не выходили. И первым подобным аксессуаром обзавелись еще наши прапращуры, обитавшие в пещерах. Это совсем не удивительно, ведь натуральный мех - самая теплая одежда. Сегодня, при виде изящных женских силуэтов, закутанных в жилетки из меха чернобурки,  ассоциации с древними людьми никого не посещают, скорее мы вспоминаем царственных особ и приближенных к ним особ. Вы решили купить себе жилет из чернобурки, чтобы выглядеть по-королевски? Тогда научитесь определять качество меха и выбирать подходящий фасон.</p>
+          </article>
         </footer>
 
       </section>
