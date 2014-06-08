@@ -5,14 +5,11 @@ html, button, input, select, textarea
   font-family: $base-f
   color: $base-font-c
 
-html
-  height: 100%
-
 body
-  height: 100%
   font-size: $base-f-size
   line-height: $base-f-height
   background-color: $body-c
+  img('bg-body.png')
 
 /*
 
@@ -46,15 +43,7 @@ label
 
 
 a
-  color: $linkColor
-  text-decoration: underline
-  &:hover
-    color $hoveredLinkColor
-    text-decoration: none
+  color: $brand-c
+  @extend .link-decorated
   &:focus
-    color $focusedLinkColor
-    outline: thin dotted
-  &:active
-    color $activeLinkColor
-  &:visited
-    color $visitedLinkColor
+    outline 1px dotted @color

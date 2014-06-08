@@ -1,0 +1,77 @@
+/* Basic jQuery Slider essential styles */
+
+.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
+.bjqs-slide{position:absolute; display:none;}
+.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+.bjqs-controls.v-centered li a{position:absolute;}
+.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+.bjqs-markers.h-centered{text-align: center;}
+.bjqs-markers li{display:inline;}
+.bjqs-markers li a{display:inline-block;}
+.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+
+
+.main-page__slider
+
+  &:after
+    pb(left top 100%)
+    @extend .pattern-ornament
+
+  .bjqs
+    position relative
+
+    &:before,
+    &:after
+      pb(left bottom)
+      @extend .border-custom
+
+    &:before
+      top 0
+      z-index: 1;
+
+
+
+
+
+  .bjqs-markers
+    container()
+    position relative
+    margin-top: -125px
+    text-align: right;
+
+    a
+      text-hide()
+      margin-left: 20px
+      size 11px
+      border-radius 50%
+      background-color rgb(255,255,255)
+      background-color rgba(255,255,255,.4)
+
+    .active-marker a
+      background-color: rgb(156,164,164);
+      background-color: rgba(156,164,164,.54);
+      box-shadow: 0 1px 1px rgba(2,3,3,.63);
+      background-image: linear-gradient(top, rgba(255,255,255,.59) 9%, rgba(255,255,255,0) 91%);
+
+
+
+.main-page__slider__item
+  position relative
+  background-size cover
+  background-position 50%
+  background-repeat no-repeat
+  vAlign()
+
+.main-page__slider__item__inner
+  margin-top: -100px
+  text-align: right;
+  font: 100 32px 'Roboto', sans-serif;
+  text-shadow: 0 1px 1px rgba(2,3,3,.63);
+  color: #feffff;
+
+.main-page__slider__item__title
+  font-weight: 700
+  font-size: 60px
+  margin-bottom: 50px

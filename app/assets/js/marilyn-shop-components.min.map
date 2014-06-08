@@ -1,1 +1,1 @@
-{"version":3,"file":"marilyn-shop-components.min.js","sources":["..\\..\\..\\temp\\temp-components.js"],"names":["call","this"],"mappings":"CAAA,cAGGA,KAAKC"}
+{"version":3,"file":"marilyn-shop-components.min.js","sources":["..\\..\\..\\temp\\temp-components.js"],"names":["$","mainPageSlider","bjqs","height","width","showcontrols","call","this"],"mappings":"CAAA,WACEA,EAAE,WACA,GAAIC,EAEJ,OADAA,GAAiBD,EAAE,sBACZC,EAAeC,MACpBC,OAAU,IACVC,MAAS,OACTC,cAAc,QAIjBC,KAAKC"}

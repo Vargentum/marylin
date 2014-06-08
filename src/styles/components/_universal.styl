@@ -1,0 +1,64 @@
+.uv-btn
+  pressable()
+  border-radius 15px
+  overflow hidden
+  background: linear-gradient(to bottom, rgba(207,87,87,1) 0%,rgba(207,87,87,1) 19%,rgba(200,81,81,1) 38%,rgba(182,66,66,1) 73%,rgba(180,64,64,1) 100%);
+  padding: 4px 20px
+
+  title 15px #ecefef
+  text-shadow: 0 1px 0 rgba(2,3,3,.25);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /*pattern*/
+  &:before
+    pattern .15
+
+  /*glare*/
+  &:after
+    pb(left top)
+    top 0
+    size 100% 50%
+    opacity: .6;
+    border-radius: 0 0 13px 13px / 0 0 15px 15px;
+    background-image: linear-gradient(bottom, rgba(255,255,255,.18) -25%, rgba(255,255,255,0) 125%);
+
+  &>*
+    position relative
+    z-index: 1;
+
+.uv-bar
+  display block
+  width: 940px
+  margin: 0 auto 35px;
+  height: 62px
+  img('bar.png')
+  box-shadow: 0 4px 15px rgba(2,3,3,.59);
+
+  title 32px
+  font-weight: 700
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+  line-height: (@height - 5px);
+  text-align: center;
+
+  &>*
+    &:before
+      pi middle
+      margin-right: 10px
+      sprite $bar-txt-before
+
+    &:after
+      pi middle
+      margin-left: 10px
+      sprite $bar-txt-after
+
+
+.uv-section-furs
+  position relative
+  img('bg-furs.jpg')
+  padding-top: 35px
+  padding-bottom: 35px
+
+  &:before
+    pb(left top)
+    @extend .border-custom
