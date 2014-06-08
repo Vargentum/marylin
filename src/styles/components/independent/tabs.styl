@@ -1,0 +1,38 @@
+.uv-tabs
+  margin: 15px 0
+
+.uv-tabs__nav
+  hLine()
+  margin-left: -10px
+  margin-bottom: 15px
+
+  &>*
+    margin-left: 10px
+
+  a
+    display block
+    position relative
+    padding: 10px 30px
+    border #99a2a2
+    title 18px
+    text-decoration: none;
+
+    &:hover,&.current
+      color $base-font-c
+      border-color transparent
+      background-color: #fff
+
+      &:before
+        pb(left top)
+        pattern(.15)
+
+        .csscalc &
+          size calc(100% \- 6px)
+          margin: 3px
+
+        .no-csscalc &
+          size 100%
+
+
+
+

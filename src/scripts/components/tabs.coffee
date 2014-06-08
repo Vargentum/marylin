@@ -1,0 +1,1 @@
+$(".uv-tabs__nav").tabs(".uv-tabs__item");

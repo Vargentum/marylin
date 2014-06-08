@@ -1,0 +1,36 @@
+
+.uv-bar
+  display block
+  width: 940px
+  margin: 0 auto 35px;
+  height: 62px
+  img('bar.png')
+  box-shadow: 0 4px 15px rgba(2,3,3,.59);
+
+  title 32px $brand-c
+  font-weight: 700
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+  line-height: (@height - 5px);
+  text-align: center;
+
+  &>*
+    &:before
+      pi middle
+      margin-right: 10px
+      sprite $bar-txt-before
+
+    &:after
+      pi middle
+      margin-left: 10px
+      sprite $bar-txt-after
+
+
+.uv-section-furs
+  position relative
+  img('bg-furs.jpg')
+  padding-top: 35px
+  padding-bottom: 35px
+
+  &:before
+    pb(left top)
+    @extend .border-custom

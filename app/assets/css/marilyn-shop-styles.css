@@ -543,7 +543,7 @@ a:hover,
 a:focus,
 a:active,
 a:visited {
-  color: #3a3229;
+  color: #b34040;
 }
 a:focus {
   outline: 1px dotted;
@@ -584,7 +584,6 @@ a:focus {
 .uv-btn {
   position: relative;
   border-radius: 15px;
-  overflow: hidden;
   background: -webkit-linear-gradient(top, #cf5757 0%, #cf5757 19%, #c85151 38%, #b64242 73%, #b44040 100%);
   background: linear-gradient(to bottom, #cf5757 0%, #cf5757 19%, #c85151 38%, #b64242 73%, #b44040 100%);
   padding: 4px 20px;
@@ -594,9 +593,6 @@ a:focus {
   text-decoration: none;
 /*pattern*/
 /*glare*/
-}
-.uv-btn:active {
-  top: 1px;
 }
 .uv-btn,
 .uv-btn:hover,
@@ -617,6 +613,7 @@ a:focus {
   background-position: 50% 50%;
   background-repeat: repeat;
   opacity: 0.15;
+  border-radius: 15px;
 }
 .uv-btn:after {
   content: '';
@@ -635,6 +632,95 @@ a:focus {
 .uv-btn>* {
   position: relative;
   z-index: 1;
+}
+.uv-btn:hover {
+  background-color: #e75656;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.13);
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.36) 19.5%, rgba(255,255,255,0) 80.5%);
+  background-image: linear-gradient(top, rgba(255,255,255,0.36) 19.5%, rgba(255,255,255,0) 80.5%);
+}
+.uv-btn:active {
+  background: #b44040;
+  box-shadow: inset 0 7px 7px rgba(0,0,0,0.21);
+}
+.uv-btn:active:after {
+  display: none;
+}
+.uv-btn--back {
+  border: 1px solid #bababa;
+  border-radius: 2px;
+  background-color: #e7e5e1;
+  background-image: -webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  padding: 3px 10px 3px 7px;
+  text-decoration: none;
+}
+.uv-btn--back,
+.uv-btn--back:hover,
+.uv-btn--back:focus,
+.uv-btn--back:active,
+.uv-btn--back:visited {
+  color: #373737;
+}
+.uv-btn--back:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -96px -29px;
+  width: 5px;
+  height: 9px;
+  margin-right: 7px;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+.uv-btn--back:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.13);
+}
+.uv-btn--back:active {
+  background-color: #dfdddb;
+  box-shadow: inset 0 3px 7px rgba(0,0,0,0.12);
+}
+.crumbs {
+  padding-top: 2px;
+  margin-bottom: 25px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.crumbs a {
+  display: block;
+}
+.crumbs a,
+.crumbs a:hover,
+.crumbs a:focus,
+.crumbs a:active,
+.crumbs a:visited {
+  color: inherit;
+}
+.crumbs a:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -304px -27px;
+  width: 6px;
+  height: 12px;
+  margin: 0 5px 0 10px;
+}
+.crumbs li:last-child a {
+  text-decoration: none;
+  cursor: default;
+}
+.crumbs li:last-child a,
+.crumbs li:last-child a:hover,
+.crumbs li:last-child a:focus,
+.crumbs li:last-child a:active,
+.crumbs li:last-child a:visited {
+  color: #99a1a1;
+}
+.crumbs li:last-child a:after {
+  display: none;
 }
 .uv-bar {
   display: block;
@@ -663,7 +749,7 @@ a:focus {
   vertical-align: middle;
   margin-right: 10px;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -170px -27px;
+  background-position: -280px -54px;
   width: 31px;
   height: 11px;
 }
@@ -673,7 +759,7 @@ a:focus {
   vertical-align: middle;
   margin-left: 10px;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -203px -27px;
+  background-position: -63px -29px;
   width: 31px;
   height: 11px;
 }
@@ -690,6 +776,84 @@ a:focus {
   position: absolute;
   left: 0;
   top: 0;
+}
+.uv-tabs {
+  margin: 15px 0;
+}
+.uv-tabs__nav {
+  margin-left: -10px;
+  margin-bottom: 15px;
+}
+.uv-tabs__nav>* {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.uv-tabs__nav>* {
+  margin-left: 10px;
+}
+.uv-tabs__nav a {
+  display: block;
+  position: relative;
+  padding: 10px 30px;
+  border: 1px solid #99a2a2;
+  font: 18px 'PT Serif', serif;
+  text-decoration: none;
+}
+.uv-tabs__nav a,
+.uv-tabs__nav a:hover,
+.uv-tabs__nav a:focus,
+.uv-tabs__nav a:active,
+.uv-tabs__nav a:visited {
+  color: #b34040;
+}
+.uv-tabs__nav a:hover,
+.uv-tabs__nav a.current {
+  border-color: transparent;
+  background-color: #fff;
+}
+.uv-tabs__nav a:hover,
+.uv-tabs__nav a.current,
+.uv-tabs__nav a:hover:hover,
+.uv-tabs__nav a.current:hover,
+.uv-tabs__nav a:hover:focus,
+.uv-tabs__nav a.current:focus,
+.uv-tabs__nav a:hover:active,
+.uv-tabs__nav a.current:active,
+.uv-tabs__nav a:hover:visited,
+.uv-tabs__nav a.current:visited {
+  color: #373737;
+}
+.uv-tabs__nav a:hover:before,
+.uv-tabs__nav a.current:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAFklEQVQY02NgYGD4D8VwgCGAUwIsAAADTwf52WUYlQAAAABJRU5ErkJggg==");
+  background-position: 50% 50%;
+  background-repeat: repeat;
+  opacity: 0.15;
+}
+.csscalc .uv-tabs__nav a:hover:before,
+.csscalc .uv-tabs__nav a.current:before {
+  width: -webkit-calc(100% - 6px);
+  width: calc(100% - 6px);
+  height: -webkit-calc(100% - 6px);
+  height: calc(100% - 6px);
+  margin: 3px;
+}
+.no-csscalc .uv-tabs__nav a:hover:before,
+.no-csscalc .uv-tabs__nav a.current:before {
+  width: 100%;
+  height: 100%;
 }
 .copyright {
   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
@@ -882,7 +1046,7 @@ a:focus {
   display: inline-block;
   vertical-align: middle;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -152px -27px;
+  background-position: -262px -54px;
   width: 16px;
   height: 12px;
   margin-right: 6px;
@@ -1134,7 +1298,7 @@ a:focus {
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  padding: 20px 0 50px;
+  padding: 25px 0 50px;
 }
 .flexbox .l-main__inner {
   display: -webkit-box;
@@ -1213,7 +1377,7 @@ a:focus {
   position: static;
   margin: 5px auto;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -9px -56px;
+  background-position: -217px -27px;
   width: 63px;
   height: 25px;
 }
@@ -1275,7 +1439,7 @@ a:focus {
   position: absolute;
   position: static;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -152px -41px;
+  background-position: -63px -42px;
   width: 70px;
   height: 8px;
   margin: 15px auto;
@@ -1309,7 +1473,7 @@ li:last-child .news-preview--main-page .news-preview__article:after {
   static: 0;
   position: static;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -236px -27px;
+  background-position: -9px -56px;
   width: 70px;
   height: 8px;
   margin: 10px auto 0;
@@ -1393,7 +1557,7 @@ li:last-child .news-preview--main-page .news-preview__article:after {
   position: static;
   margin: 5px auto;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -63px -29px;
+  background-position: -152px -27px;
   width: 63px;
   height: 25px;
 }
@@ -1708,4 +1872,210 @@ li:last-child .news-preview--main-page .news-preview__article:after {
   font-weight: 700;
   font-size: 60px;
   margin-bottom: 50px;
+}
+.product {
+  position: relative;
+}
+.product b {
+  font-weight: 700;
+}
+.product__layout--l {
+  width: 320px;
+}
+.product__layout--r {
+  width: 360px;
+}
+.product__title {
+  font: 32px 'Forum', cursive;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  margin-bottom: 15px;
+}
+.product__title,
+.product__title:hover,
+.product__title:focus,
+.product__title:active,
+.product__title:visited {
+  color: #3a3229;
+}
+.product__size {
+  margin: 15px 0 20px;
+}
+.product__size>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.product__size label {
+  font-weight: 700;
+  margin-right: 15px;
+}
+.product__size label>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.product__size select {
+  width: 50px;
+  margin-left: 5px;
+  font-weight: 700;
+}
+.product__params {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.product__params li {
+  margin-bottom: 10px;
+}
+.product__params li:last-child {
+  margin-bottom: 0;
+}
+.product__price {
+  display: block;
+  margin: 30px 0;
+  font: 17px 'PT Serif', serif;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.product__price,
+.product__price:hover,
+.product__price:focus,
+.product__price:active,
+.product__price:visited {
+  color: #373737;
+}
+.product__buy-btn {
+  margin: 30px 0;
+}
+.product__share {
+  margin-left: -15px;
+}
+.product__share>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.product__share>* {
+  margin-left: 15px;
+}
+.product__share a {
+  display: block;
+}
+.product__share__link--vk {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -152px -54px;
+  width: 20px;
+  height: 20px;
+}
+.product__share__link--fb {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -282px -27px;
+  width: 20px;
+  height: 20px;
+}
+.product__share__link--tw {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -196px -54px;
+  width: 20px;
+  height: 20px;
+}
+.product__share__link--mm {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -240px -54px;
+  width: 20px;
+  height: 20px;
+}
+.product__share__link--ya {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -174px -54px;
+  width: 20px;
+  height: 20px;
+}
+.product__share__link--lj {
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -218px -54px;
+  width: 20px;
+  height: 20px;
+}
+.product__gallery>* {
+  margin-bottom: 15px;
+}
+.product__gallery__photo {
+  background-color: #fff;
+  padding: 1px;
+  box-shadow: 0 0 12px rgba(2,3,3,0.15);
+}
+.product__gallery__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.product__gallery__photo-list--L {
+  position: relative;
+  width: 320px;
+  height: 470px;
+}
+.product__gallery__photo-list--L .product__gallery__photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  opacity: 0;
+}
+.product__gallery__photo-list--L .product__gallery__photo.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+.flexbox .product__gallery__photo-list--S {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.no-flexbox .product__gallery__photo-list--S {
+  text-align: justify;
+  font-size: 1px;
+  line-height: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+}
+.no-flexbox .product__gallery__photo-list--S>* {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.no-flexbox .product__gallery__photo-list--S:after {
+  content: '';
+  display: inline-block;
+  vertical-align: auto;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+}
+.no-flexbox .product__gallery__photo-list--S>* {
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.product__gallery__photo-list--S .product__gallery__photo {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.product__gallery__photo-list--S .product__gallery__photo:hover {
+  box-shadow: none;
 }
