@@ -280,15 +280,18 @@ a:focus {
 }
 .link-decorated-reverse,
 .footer-nav a,
-.project-nav__link {
+.project-nav__link,
+.product-catalog a {
   text-decoration: none;
 }
 .link-decorated-reverse:hover,
 .footer-nav a:hover,
 .project-nav__link:hover,
+.product-catalog a:hover,
 .link-decorated-reverse:focus,
 .footer-nav a:focus,
-.project-nav__link:focus {
+.project-nav__link:focus,
+.product-catalog a:focus {
   text-decoration: underline;
 }
 .is-shown {
@@ -540,7 +543,7 @@ a:hover,
 a:focus,
 a:active,
 a:visited {
-  color: #b34040;
+  color: #3a3229;
 }
 a:focus {
   outline: 1px dotted;
@@ -551,7 +554,7 @@ a:focus {
 .l-column--primary {
   width: 720px;
 }
-.l-column--primary {
+.l-column--secondary {
   width: 220px;
 }
 .l-footer {
@@ -660,7 +663,7 @@ a:focus {
   vertical-align: middle;
   margin-right: 10px;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -114px -56px;
+  background-position: -170px -27px;
   width: 31px;
   height: 11px;
 }
@@ -670,7 +673,7 @@ a:focus {
   vertical-align: middle;
   margin-left: 10px;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -81px -56px;
+  background-position: -203px -27px;
   width: 31px;
   height: 11px;
 }
@@ -829,13 +832,13 @@ a:focus {
 }
 .social-networks__link--vk {
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -36px -56px;
+  background-position: -9px -29px;
   width: 25px;
   height: 25px;
 }
 .social-networks__link--fb {
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -9px -56px;
+  background-position: -36px -29px;
   width: 25px;
   height: 25px;
 }
@@ -953,7 +956,7 @@ a:focus {
   display: inline-block;
   vertical-align: middle;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -63px -56px;
+  background-position: -152px -27px;
   width: 16px;
   height: 12px;
   margin-right: 6px;
@@ -1127,6 +1130,244 @@ a:focus {
 .project-nav__link:visited {
   color: #e5e1df;
 }
+.l-main__inner {
+  max-width: 960px;
+  min-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 20px 0 50px;
+}
+.flexbox .l-main__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.no-flexbox .l-main__inner {
+  text-align: justify;
+  font-size: 1px;
+  line-height: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+}
+.no-flexbox .l-main__inner>* {
+  display: inline-block;
+  vertical-align: top;
+}
+.no-flexbox .l-main__inner:after {
+  content: '';
+  display: inline-block;
+  vertical-align: auto;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+}
+.no-flexbox .l-main__inner>* {
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.sidebar {
+  text-align: center;
+}
+.sidebar__item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  static: 0;
+  position: static;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -152px 0px;
+  width: 159px;
+  height: 25px;
+  margin: 20px auto;
+}
+.sidebar__item__title {
+  font: 17px 'PT Serif', serif;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  margin-bottom: 10px;
+}
+.sidebar__item__title,
+.sidebar__item__title:hover,
+.sidebar__item__title:focus,
+.sidebar__item__title:active,
+.sidebar__item__title:visited {
+  color: #b34040;
+}
+.product-catalog a {
+  display: block;
+  font: 17px 'PT Serif', serif;
+  padding: 5px 0;
+}
+.product-catalog a,
+.product-catalog a:hover,
+.product-catalog a:focus,
+.product-catalog a:active,
+.product-catalog a:visited {
+  color: #3a3229;
+}
+.product-catalog a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  static: 0;
+  position: static;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -236px -27px;
+  width: 70px;
+  height: 8px;
+  margin: 10px auto 0;
+}
+.product-catalog li:last-child a:after {
+  display: none;
+}
+.product-catalog ul ul a {
+  font: 13px 'Open Sans', sans-serif;
+}
+.product-catalog ul ul a,
+.product-catalog ul ul a:hover,
+.product-catalog ul ul a:focus,
+.product-catalog ul ul a:active,
+.product-catalog ul ul a:visited {
+  color: #b34040;
+}
+.product-catalog ul ul a:after {
+  display: none;
+}
+.product-catalog ul ul a.is-current,
+.product-catalog ul ul a.is-current:hover,
+.product-catalog ul ul a.is-current:focus,
+.product-catalog ul ul a.is-current:active,
+.product-catalog ul ul a.is-current:visited {
+  color: #797f7f;
+}
+.news-preview {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+}
+.news-preview a,
+.news-preview a:hover,
+.news-preview a:focus,
+.news-preview a:active,
+.news-preview a:visited {
+  color: inherit;
+}
+.news-preview__title {
+  font-style: normal;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcsAAAAFCAYAAAAql8c3AAAAZUlEQVRo3u3XIQ6AIBSAYU+CV6R5Nw0eSosJCS8QMLlR+L7tl2BjgzeWLedU22tXrGkBgEl152L9HLXSdNoqAGbVnYsxOYs0MseRHxeZM6TRPV6WAND4elmm+HHHutoqAGbVm4svYuU0TKsoYx8AAAAASUVORK5CYII=");
+  background-position: 50% 18px;
+  background-repeat: no-repeat;
+  font: 32px 'Forum', cursive;
+}
+.news-preview__title,
+.news-preview__title:hover,
+.news-preview__title:focus,
+.news-preview__title:active,
+.news-preview__title:visited {
+  color: #3a3229;
+}
+.news-preview__title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  position: static;
+  margin: 5px auto;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -9px -56px;
+  width: 63px;
+  height: 25px;
+}
+.news-preview__article {
+  position: relative;
+  margin-bottom: 15px;
+}
+.news-preview__article__title {
+  font-size: 18px;
+}
+.news-preview__article__title,
+.news-preview__article__title:hover,
+.news-preview__article__title:focus,
+.news-preview__article__title:active,
+.news-preview__article__title:visited {
+  color: #b34040;
+}
+.news-preview__footer {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.news-preview__footer,
+.news-preview__footer:hover,
+.news-preview__footer:focus,
+.news-preview__footer:active,
+.news-preview__footer:visited {
+  color: #b34040;
+}
+.news-preview--main-page {
+  width: 460px;
+}
+.news-preview--main-page,
+.news-preview--main-page:hover,
+.news-preview--main-page:focus,
+.news-preview--main-page:active,
+.news-preview--main-page:visited {
+  color: #bababa;
+}
+.news-preview--main-page *,
+.news-preview--main-page *:hover,
+.news-preview--main-page *:focus,
+.news-preview--main-page *:active,
+.news-preview--main-page *:visited {
+  color: inherit;
+}
+.news-preview--main-page .news-preview__title,
+.news-preview--main-page .news-preview__title:hover,
+.news-preview--main-page .news-preview__title:focus,
+.news-preview--main-page .news-preview__title:active,
+.news-preview--main-page .news-preview__title:visited {
+  color: #f1f3f3;
+}
+.news-preview--main-page .news-preview__article {
+  margin-bottom: 0;
+}
+.news-preview--main-page .news-preview__article:after {
+  content: '';
+  display: block;
+  position: absolute;
+  position: static;
+  background-image: url("../img/marilyn-shop-sprite.png");
+  background-position: -152px -41px;
+  width: 70px;
+  height: 8px;
+  margin: 15px auto;
+}
+li:last-child .news-preview--main-page .news-preview__article:after {
+  display: none;
+}
+.news-preview--main-page .news-preview__article__title,
+.news-preview--main-page .news-preview__article__title:hover,
+.news-preview--main-page .news-preview__article__title:focus,
+.news-preview--main-page .news-preview__article__title:active,
+.news-preview--main-page .news-preview__article__title:visited {
+  color: #f1f4f4;
+}
 .production-types {
   max-width: 980px;
   min-width: 960px;
@@ -1292,84 +1533,6 @@ a:focus {
   margin-top: 5px;
   font-size: 22px;
 }
-.main-page__news {
-  width: 460px;
-  text-align: center;
-  font-style: italic;
-  font-family: 'PT Serif', serif;
-}
-.main-page__news,
-.main-page__news:hover,
-.main-page__news:focus,
-.main-page__news:active,
-.main-page__news:visited {
-  color: #bababa;
-}
-.main-page__news *,
-.main-page__news *:active,
-.main-page__news *:visited {
-  color: inherit;
-}
-.main-page__news *:hover,
-.main-page__news *:focus {
-  color: !important;
-}
-.main-page__news__title {
-  font-style: normal;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcsAAAAFCAYAAAAql8c3AAAAZUlEQVRo3u3XIQ6AIBSAYU+CV6R5Nw0eSosJCS8QMLlR+L7tl2BjgzeWLedU22tXrGkBgEl152L9HLXSdNoqAGbVnYsxOYs0MseRHxeZM6TRPV6WAND4elmm+HHHutoqAGbVm4svYuU0TKsoYx8AAAAASUVORK5CYII=");
-  background-position: 50% 18px;
-  background-repeat: no-repeat;
-  font: 32px 'Forum', cursive;
-}
-.main-page__news__title,
-.main-page__news__title:hover,
-.main-page__news__title:focus,
-.main-page__news__title:active,
-.main-page__news__title:visited {
-  color: #f1f3f3;
-}
-.main-page__news__title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  position: static;
-  margin: 5px auto;
-  background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -74px -29px;
-  width: 63px;
-  height: 25px;
-}
-.main-page__news__article {
-  position: relative;
-}
-.main-page__news__article:after {
-  content: '';
-  display: block;
-  position: absolute;
-  position: static;
-  background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -63px -70px;
-  width: 70px;
-  height: 8px;
-  margin: 15px auto;
-}
-li:last-child .main-page__news__article:after {
-  display: none;
-}
-.main-page__news__article__title {
-  font-size: 18px;
-}
-.main-page__news__article__title,
-.main-page__news__article__title:hover,
-.main-page__news__article__title:focus,
-.main-page__news__article__title:active,
-.main-page__news__article__title:visited {
-  color: #f1f4f4;
-}
-.main-page__news__footer {
-  margin-top: 15px;
-  font-size: 15px;
-}
 .main-page__about-us {
   width: 427px;
   height: 326px;
@@ -1398,7 +1561,7 @@ li:last-child .main-page__news__article:after {
   position: static;
   margin: 5px auto;
   background-image: url("../img/marilyn-shop-sprite.png");
-  background-position: -9px -29px;
+  background-position: -63px -29px;
   width: 63px;
   height: 25px;
 }

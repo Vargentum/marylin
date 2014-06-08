@@ -64,54 +64,6 @@
   font-size: 22px
 
 
-
-.main-page__news
-  width: 460px
-  text-align: center;
-  color: #bababa;
-  font-style: italic;
-  font-family: $title-f;
-
-  *
-    color inherit !important
-
-
-.main-page__news__title
-  font-style normal
-  img('bg-main-page-news-title.png', '50% 18px')
-  background-repeat no-repeat
-  brand 32px #f1f3f3;
-
-  &:after
-    pb()
-    position static
-    margin 5px auto
-    sprite $main-page-news-vignette
-
-
-.main-page__news__article
-  position relative
-
-  &:after
-    pb()
-    position static
-    sprite $main-page-news-divider
-    margin 15px auto
-
-  li:last-child &
-    &:after
-      display none
-
-
-.main-page__news__article__title
-  font-size: 18px
-  color: #f1f4f4;
-
-.main-page__news__footer
-  margin-top: 15px
-  font-size: 15px
-
-
 .main-page__about-us
   size 427px 326px
   img('bg-main-page-about-us.png')
@@ -123,7 +75,7 @@
 
 
 .main-page__about-us__title
-  brand 32px $title-c
+  brand 32px
 
   &:after
     pb()

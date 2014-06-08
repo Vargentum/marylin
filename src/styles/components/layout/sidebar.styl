@@ -1,0 +1,109 @@
+.sidebar
+  text-align: center;
+
+.sidebar__item
+  &:after
+    pb static
+    sprite $sidebar-item-divider
+    margin: 20px auto
+
+.sidebar__item__title
+  title 17px
+  font-weight: 700
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+  margin-bottom: 10px
+
+
+
+.product-catalog
+
+  a
+    display block
+    @extend .link-decorated-reverse
+    title 17px $brand-c
+    padding: 5px 0
+
+    &:after
+      pb static
+      sprite $catalog-item-divider
+      margin: 10px auto 0
+
+  li:last-child a:after
+    display none
+
+  ul ul
+
+    a
+      font: $base-f-size $base-f
+      color $title-c
+
+      &:after
+        display none
+
+      &.is-current
+        color: #797f7f;
+
+
+
+.news-preview
+  text-align: center;
+  font-family: $title-f;
+  font-style italic
+
+  a
+    color inherit
+
+.news-preview__title
+  font-style normal
+  img('bg-main-page-news-title.png', '50% 18px')
+  background-repeat no-repeat
+  brand 32px
+
+  &:after
+    pb()
+    position static
+    margin 5px auto
+    sprite $main-page-news-vignette
+
+
+.news-preview__article
+  position relative
+  margin-bottom: 15px
+
+.news-preview__article__title
+  font-size: 18px
+  color $title-c
+
+.news-preview__footer
+  margin-top: 15px
+  font-size: 15px
+  color: $title-c;
+
+
+
+.news-preview--main-page
+  width: 460px
+  color: #bababa;
+
+  *
+    color inherit
+
+  .news-preview__title
+    color #f1f3f3;
+
+  .news-preview__article
+    margin-bottom: 0
+
+    &:after
+      pb()
+      position static
+      sprite $main-page-news-divider
+      margin 15px auto
+
+    li:last-child &
+      &:after
+        display none
+
+
+  .news-preview__article__title
+    color: #f1f4f4;

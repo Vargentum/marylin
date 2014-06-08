@@ -13,11 +13,11 @@ module.exports = (grunt) ->
       app: "./app"
       temp: "./temp"
       assets: "<%= project.app %>/assets"
-      styles: "<%= project.src %>/styles/{,*/}*.styl"
-      components: "<%= project.src %>/scripts/components/{,*/}*.coffee"
-      plugins: "<%= project.src %>/scripts/plugins/{,*/}*.js"
-      views: "<%= project.src %>/views/{,*/}*.html"
-      sprites: "<%= project.assets %>/img/sprite/{,*/}*.png"
+      styles: "<%= project.src %>/styles/{,**/}*.styl"
+      components: "<%= project.src %>/scripts/components/{,**/}*.coffee"
+      plugins: "<%= project.src %>/scripts/plugins/{,**/}*.js"
+      views: "<%= project.src %>/views/{,**/}*.html"
+      sprites: "<%= project.assets %>/img/sprite/{,**/}*.png"
 
     tag:
       banner: "/*!\n" + " * <%= pkg.name %>\n" + " * <%= pkg.title %>\n" + " * @author <%= pkg.author %>\n" + " * <%= pkg.url %>\n" + " */\n"
