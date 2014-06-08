@@ -1841,6 +1841,41 @@ li:last-child .news-preview--main-page .news-preview__article:after {
 .sidebar__item__title:visited {
   color: #b34040;
 }
+.article--full p,
+.article--full ul,
+.article--full ol {
+  margin-bottom: 20px;
+}
+.article--full b {
+  font-weight: 700;
+}
+.article--full i {
+  font-style: italic;
+}
+.article--full ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.article--full ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+.article--full li {
+  margin-bottom: 5px;
+}
+.article--full .img--l {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.article--full .img--r {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+.article__header {
+  margin-bottom: 20px;
+}
 .main-page__about-us {
   width: 427px;
   height: 326px;
