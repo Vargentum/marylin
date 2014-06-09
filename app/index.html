@@ -23,6 +23,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <!--CSS include-->
   <link href="assets/css/marilyn-shop-styles.css" rel="stylesheet">
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDKjHiTQ94z3p3lENGxVRtNGggsdP6JqiQ&sensor=false"></script>
 </head>
 
 <body itemscope itemtype='http://schema.org/WebPage'>
@@ -78,7 +79,93 @@
   <!--include "templates/product-list"-->
   <!--include "templates/purchase"-->
   <!--include "templates/contacts"-->
-  <!--include "templates/_navigation"-->
+  <div class="l-main__inner">
+
+    <!--sidebar-->
+    <aside class="l-column--secondary  sidebar">
+
+      <section class="sidebar__item  product-catalog">
+        <header>
+          <h2 class="sidebar__item__title">Каталог товаров</h2>
+        </header>
+        <ul>
+          <li><a href="#">Кожаные куртки</a></li>
+          <li><a href="#">Сумки</a></li>
+          <li><a href="#">Кожгалантерея</a></li>
+          <li><a href="#">Шубы</a></li>
+          <li>
+            <a href="#">Меховые жилетки</a>
+            <ul>
+              <li><a href="#">Меховые жилеты из шиншиллового кролика</a></li>
+              <li><a href="#" class="is-current">Меховые жилеты из черно-бурой лисы</a></li>
+              <li><a href="#">Меховые жилеты из рыжей лисы</a></li>
+              <li><a href="#">Норковые жилеты</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Ювелирные украшения</a></li>
+          <li><a href="#">Бижутерия</a></li>
+        </ul>
+
+      </section>
+
+      <section class="sidebar__item  news-preview">
+        <header>
+          <h2 class="sidebar__item__title">Новости</h2>
+        </header>
+        <ul>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+        </ul>
+        <footer class="news-preview__footer">
+          <a href="#">Все новости</a>
+        </footer>
+      </section>
+
+    </aside>
+
+    <!--main column-->
+    <div class="l-column--primary">
+
+      <nav class="crumbs">
+        <ul class="l-hLine">
+          <li><a class="crumbs__link" href="#">Главная</a></li>
+          <li><a href="#">Хлебные крошки</a></li>
+          <li><a href="#">Текущий раздел</a></li>
+        </ul>
+      </nav>
+
+      <h2 class="main__title">Навигация по проекту</h2>
+
+      <ul style="font-size: 18px;">
+        <li><a href="article.html">Article</a></li>
+        <li><a href="articles-list.html">Articles list</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="main.html">Main</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="product-list.html">Product list</a></li>
+        <li><a href="purchase.html">Purchase</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+
+    </div>
+
+  </div>
 
 </main>
 <!--MAIN end-->
