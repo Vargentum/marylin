@@ -1,0 +1,166 @@
+<div class="l-main__inner">
+
+  include "../components/sidebar"
+
+  <!--main column-->
+  <div class="l-column--primary">
+
+    include "../components/crumbs"
+
+    <section>
+      <header>
+        <h2 class="main__title">Моя корзина</h2>
+      </header>
+
+      include "../components/cart-table"
+
+
+      <div class="purchase-info">
+
+        <section>
+          <header>
+            <h2 class="purchase-info__title">Информация для доставки товара</h2>
+          </header>
+
+          <aside class="purchase-info__sidebar">
+            <h3 class="purchase-info__sub-title">Просим вас обратить внимание...</h3>
+            <p>на то, что о способе оплаты заказа следует договариваться с нашим оператором в момент согласования деталей доставки.</p>
+            <p>Способы оплаты для физических лиц:</p>
+            <ul>
+              <li>Наличный расчет</li>
+              <li>Оплата банковской картой</li>
+              <li>Банковский перевод</li>
+            </ul>
+            <p>Способы оплаты для юридических лиц:</p>
+            <ul>
+              <li>Наличный расчет</li>
+              <li>Безналичный расчет</li>
+            </ul>
+          </aside>
+
+          <div class="purchase-info__user-data">
+            <label>
+              <span>Ф.И.О.</span>
+              <input type="text" required/>
+            </label>
+            <label>
+              <span>Контактный телефон</span>
+              <input type="tel"/>
+            </label>
+            <label>
+              <span>Электронная почта</span>
+              <input type="email"/>
+            </label>
+          </div>
+
+          <section>
+            <header>
+              <h2 class="purchase-info__title">Получение товара</h2>
+            </header>
+            <ul>
+              <li>
+                <label class="purchase-info__delivery-type">
+                  <input type="radio" name="delivery"/>
+                  <b class="purchase-info__delivery-type__label">Самовывоз</b>
+                </label>
+                Адрес получения: <br/>
+                Тут будет адрес пункта выдачи
+              </li>
+              <li>
+                <label class="purchase-info__delivery-type">
+                  <input type="radio" name="delivery"/>
+                  <b class="purchase-info__delivery-type__label">Доставка курьером нашей компании</b>
+                </label>
+                <address class="purchase-info__user-address">
+                  <h4 class="purchase-info__user-address__title">Укажите адрес доставки:</h4>
+                  <div class="purchase-info__user-address__body">
+                    <label>
+                      <span>Город</span>
+                      <input type="text" class="purchase-info__user-address__input--L"/>
+                    </label>
+                    <label>
+                      <span>Улица</span>
+                      <input type="text" class="purchase-info__user-address__input--L"/>
+                    </label>
+                    <label>
+                      <span>Дом</span>
+                      <input type="text" class="purchase-info__user-address__input--S"/>
+                    </label>
+                    <label>
+                      <span>Корпус</span>
+                      <input type="text" class="purchase-info__user-address__input--S"/>
+                    </label>
+                    <label>
+                      <span>Строение</span>
+                      <input type="text" class="purchase-info__user-address__input--S"/>
+                    </label>
+                    <label>
+                      <span>Кв./офис </span>
+                      <input type="text" class="purchase-info__user-address__input--S"/>
+                    </label>
+                  </div>
+                </address>
+              </li>
+              <li>
+                <label class="purchase-info__delivery-type">
+                  <input type="radio" name="delivery"/>
+                  <b class="purchase-info__delivery-type__label">Доставка транспортной компанией в любую точку России</b>
+                </label>
+                <p>В случае необходимости консультации по вопросам доставки . просим Вас связаться с нашим менеджером по телефону. Если же Вы самостоятельно определились с выбором перевозчика - просим указать всю информацию ниже.</p>
+              </li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+          <header>
+            <h2 class="purchase-info__title">Способ оплаты</h2>
+          </header>
+
+          <div class="purchase-info__payment">
+            <header>
+              <label>
+                <input type="radio" name="payment-type"/>
+                <span>Наличный расчет</span>
+              </label>
+              <label>
+                <input type="radio" name="payment-type"/>
+                <span>Оплата банковской картой</span>
+              </label>
+              <label>
+                <input type="radio" name="payment-type"/>
+                <span>Другие способы оплаты</span>
+              </label>
+            </header>
+            <ul>
+              <li><img src="assets/img/payment-type-2.png" alt="Visa and Mastercard support"/></li>
+            </ul>
+            <footer class="purchase-info__serv-info">После нажатия “оформить заказ” вас переведут на платежный шлюз</footer>
+          </div>
+
+        </section>
+
+        <section>
+          <header>
+            <h2 class="purchase-info__title">Ваши комментарии к заказу</h2>
+          </header>
+          <textarea></textarea>
+          <footer>
+            <br/>
+            Наш менеджер свяжется с Вами для подтверждения заказа в ближайшее время!
+          </footer>
+          <br/>
+        </section>
+
+        <footer>
+          <button type="submit" class="uv-btn--brand">Оформить заказ</button>
+        </footer>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
