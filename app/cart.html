@@ -72,10 +72,6 @@
 
   <!--include "templates/article"-->
   <!--include "templates/articles-list"-->
-  <!--include "templates/cart"-->
-  <!--include "templates/main"-->
-  <!--include "templates/product"-->
-  <!--include "templates/product-list"-->
   <div class="l-main__inner">
 
     <!--sidebar-->
@@ -147,20 +143,100 @@
         </ul>
       </nav>
 
-      <h2 class="main__title">Навигация по проекту</h2>
+      <section>
+        <header>
+          <h2 class="main__title">Моя корзина</h2>
+        </header>
 
-      <ul style="font-size: 18px;">
-        <li><a href="article.html">Article</a></li>
-        <li><a href="articles-list.html">Articles list</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="main.html">Main</a></li>
-        <li><a href="product.html">Product</a></li>
-        <li><a href="product-list.html">Product list</a></li>
-      </ul>
+        <table class="cart--L">
+          <tr>
+            <th>Наименование</th>
+            <th>Цена, руб</th>
+            <th>Скидка</th>
+            <th colspan="2">Стоимость, руб</th>
+          </tr>
+          <tr class="product--in-cart">
+            <td>
+              <div class="product__description">
+                <div class="product__photo">
+                  <img src="http://fakeimg.pl/100x100/?text=100x100">
+                </div>
+                <div class="product__description__main">
+                  <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                  <p>Размер 42</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <b class="product__price">119 499 руб.</b>
+              <div class="product__quantity" >
+                <p>Кол-во:</p>
+                <input type="number" value="1"/>
+              </div>
+            </td>
+            <td>
+              <b class="product__price  product__price--discount">0.р</b>
+            </td>
+            <td>
+              <b class="product__price  product__price--total">119 499 руб</b>
+            </td>
+            <td>
+              <a href="#" class="uv-btn--delete">Delete item</a>
+            </td>
+          </tr>
+          <tr class="product--in-cart">
+            <td>
+              <div class="product__description">
+                <div class="product__photo">
+                  <img src="http://fakeimg.pl/100x100/?text=100x100">
+                </div>
+                <div class="product__description__main">
+                  <h3 class="product__title"><a href="#">Жилет из меха лисы, 3/4 поп. рукав (1196)</a></h3>
+                  <p>Размер 42</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <b class="product__price">119 499 руб.</b>
+              <div class="product__quantity" >
+                <p>Кол-во:</p>
+                <input type="number" value="1"/>
+              </div>
+            </td>
+            <td>
+              0 р.
+            </td>
+            <td>
+              <b class="product__price  product__price--total">119 499 руб</b>
+            </td>
+            <td>
+              <a href="#" class="uv-btn--delete">Delete item</a>
+            </td>
+          </tr>
+        </table>
+
+        <footer class="cart__total">
+          <header>
+            <h3><b>Итого:</b></h3>
+          </header>
+          <p>Товаров: <b>2</b></p>
+          <p>Сумма: <b>238 569 руб.</b></p>
+          <p>Скидка: <b>0 руб.</b></p>
+        </footer>
+        <p><a href="#" class="uv-btn--brand">Оформить заказ</a></p>
+
+        <br/>
+        <br/>
+        <p><a href="#" class="uv-btn  uv-btn--l">Вернуться к списку товаров</a></p>
+
+      </section>
 
     </div>
 
   </div>
+  <!--include "templates/main"-->
+  <!--include "templates/product"-->
+  <!--include "templates/product-list"-->
 
 </main>
 <!--MAIN end-->
