@@ -1,0 +1,17 @@
+.social-networks
+  hLine(top)
+
+
+.social-networks__link
+  display block
+  text-hide()
+  pressable()
+  margin-right: 5px
+/*transform translateY(25%)*/
+
+$social-networks-types = vk $social-networks-vk,
+fb $social-networks-fb
+
+for $each in $social-networks-types
+  .social-networks__link--{$each[0]}
+    sprite $each[1]

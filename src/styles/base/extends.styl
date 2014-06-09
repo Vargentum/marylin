@@ -36,14 +36,14 @@ ol.list-reset, ol.reset-list
   reset-font()
 
 .link-decorated
-  text-decoration: $link-decoration;
+  text-decoration: underline
   &:hover,&:focus
-    text-decoration: $link-decoration-hover
+    text-decoration: none
 
 .link-decorated-reverse
-  text-decoration: $link-decoration-hover
+  text-decoration: none
   &:hover,&:focus
-    text-decoration: $link-decoration
+    text-decoration: underline
 
 .is-shown
   visibility visible !important
@@ -62,4 +62,17 @@ ol.list-reset, ol.reset-list
   input&
     border #e34f59 !important
 
+.ellipsis
+  ellipsis()
+
+
+.pattern-ornament
+  size 100% 7px
+  img('pattern-ornament.png')
+
+.border-custom
+  size 100% 3px
+  background-color: #8c8d8d;
+  border-top: 1px solid #b7b7b8
+  border-bottom: 1px solid #707273
 

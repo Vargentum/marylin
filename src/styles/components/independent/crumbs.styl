@@ -1,0 +1,24 @@
+.crumbs
+  padding-top: 2px
+  margin-bottom: 25px
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+  a
+    display block
+    color: inherit;
+
+    //divider
+    &:after
+      pi middle
+      sprite $crumbs-divider
+      margin: 0 5px 0 10px
+
+  li:last-child
+    a
+      color: #99a1a1;
+      text-decoration: none;
+      cursor default
+
+      &:after
+        display none
+

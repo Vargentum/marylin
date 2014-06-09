@@ -56,6 +56,10 @@ pb()
   display: block;
   absolute: arguments
 
+  if arguments[0] == static
+    position static
+
+
 pi($align = auto)
   content: '';
   display: inline-block;
@@ -65,9 +69,8 @@ pi($align = auto)
 /*--------------------------------------
   Quick image insert
 --------------------------------------*/
-img($name, $position = '50% 50%', $repeat = no-repeat)
+img($name, $position = '50% 50%')
   background-image data($img-path + $name)
-  background-repeat $repeat
   background-position unquote($position)
 
 
@@ -107,10 +110,13 @@ title($size, $color = $title-c)
 /*--------------------------------------
     Layout helpers
 --------------------------------------*/
-hLine($align = baseline)
+hLine($align = baseline, $gutter = 0)
+  margin-left: -($gutter);
   &>*
     display: inline-block
     vertical-align: $align
+    margin-left: $gutter;
+
 
   if $align == none
     &>*
@@ -119,21 +125,34 @@ hLine($align = baseline)
       vertical-align: initial
 
 
+fLine()
+  display flex
+  justify-content: arguments[0]
+  align-items:     arguments[1]
+
+
 jLine($align = baseline)
   .flexbox &
-    display flex
-    justify-content space-between
-    align-items $align
+    fLine space-between center
+
     if $align == top
       align-items flex-start
+
     if $align == bottom
       align-items flex-end
+
     if $align == middle
       align-items center
+
+    if $align == stretch
+      align-items stretch
+
   .no-flexbox &
     hLine $align
+
     if $align == stretch
       hLine middle
+
     text-align: justify
     font-size: 1px
     line-height: 0
@@ -152,6 +171,8 @@ jLine($align = baseline)
       line-height: $base-f-height
 
 
+
+
 vAlign($type = middle, $full = true)
   hLine $type
   &:after
@@ -167,28 +188,25 @@ vAlign($type = middle, $full = true)
 
 ctr()
   position absolute
-  if arguments[0] == all
-    left 50%
-    top 50%
+
+  if arguments[0] == y
+    top: 50%
+    transform translateY(-50%)
+
+  else if arguments[0] == x
+    left: 50%
+    transform translateX(-50%)
+
   else
-    {arguments[0]} 50%
+    top: 50%
+    left 50%
+    transform translate(-50%, -50%)
 
-  .csstransforms &
-    if arguments[0] == top
-      transform translateY(-50%)
-    if arguments[0] == left
-      transform translateX(-50%)
-    if arguments[0] == all
-      transform translate(-50%, -50%)
+p-ctr()
+  content ''
+  display block
+  ctr(arguments)
 
-  .no-csstransforms &
-    if arguments[0] == top
-      margin-top -(arguments[1] / 2)
-    if arguments[0] == left
-      margin-left -(arguments[1] / 2)
-    if arguments[0] == all
-      margin-top -(arguments[2] / 2)
-      margin-left -(arguments[1] / 2)
 
 
 container($width = $base-max-w)
@@ -251,3 +269,31 @@ trans()
     transition-duration arguments[1]
   else
     transition-duration $transition-duration
+
+pressable($deep = 1px)
+  position relative
+  &:active
+    top $deep
+
+text-gradient()
+  background: -webkit-linear-gradient(arguments[0], arguments[1])
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+
+text-hide()
+  font: 0/0 serif
+  text-shadow: none
+  color: transparent
+  if arguments[0] == none
+    font:  $base-f-size/$base-f-height $base-f
+    color: inherit
+
+
+pattern()
+  pb(left top)
+  size 100%
+  img('pattern-base.png')
+  background-repeat repeat
+  if arguments
+    opacity arguments

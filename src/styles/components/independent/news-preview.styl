@@ -1,0 +1,84 @@
+/*--------------------------------------
+  base view (at sidebar)
+--------------------------------------*/
+.news-preview
+  text-align: center;
+  font-family: $title-f;
+  font-style italic
+
+  a
+    color inherit
+
+.news-preview__title
+  font-style normal
+  img('bg-main-page-news-title.png', '50% 18px')
+  background-repeat no-repeat
+  brand 32px
+
+  &:after
+    pb()
+    position static
+    margin 5px auto
+    sprite $main-page-news-vignette
+
+
+.news-preview__article
+  position relative
+  margin-bottom: 15px
+
+.news-preview__article__title
+  font-size: 18px
+  color $title-c
+
+
+.news-preview__article__body
+  font-style normal
+  font: $base-f-size $base-f
+  color: #797f7f;
+  margin-top: 5px
+
+.news-preview__footer
+  margin-top: 15px
+  font-size: 15px
+  color: $title-c;
+
+
+/*--------------------------------------
+  main page view
+--------------------------------------*/
+.news-preview--main-page
+  width: 460px
+  color: #bababa;
+
+  *
+    color inherit
+
+  .news-preview__title
+    color #f1f3f3;
+
+  .news-preview__article
+    margin-bottom: 0
+
+    &:after
+      pb()
+      position static
+      sprite $main-page-news-divider
+      margin 15px auto
+
+    li:last-child &
+      &:after
+        display none
+
+
+  .news-preview__article__title
+    color: #f1f4f4;
+
+
+/*--------------------------------------
+  articles list view
+--------------------------------------*/
+.news-preview--articles-list
+  text-align: left;
+
+  time
+    font: normal 12px $base-f

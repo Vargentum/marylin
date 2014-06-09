@@ -1,0 +1,116 @@
+/*--------------------------------------
+  Default btn
+--------------------------------------*/
+.uv-btn
+  border: #bababa;
+  border-radius: 2px;
+  background-color: #e7e5e1;
+  background-image: linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  padding: 3px 10px 3px 7px
+  color $base-font-c
+  text-decoration: none;
+
+  &:hover
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 5px rgba(0,0,0,.13);
+
+  &:active
+    background-color: #dfdddb;
+    box-shadow: inset 0 3px 7px rgba(0,0,0,.12);
+
+
+
+.uv-btn--l
+  &:before
+    pi middle
+    sprite $btn-l
+    margin-right: 7px
+    transform translateY(-1px)
+
+.uv-btn--r
+  &:after
+    pi middle
+    sprite $btn-r
+    margin-left: 7px
+    transform translateY(-1px)
+
+
+
+/*--------------------------------------
+  Brand btn
+--------------------------------------*/
+.uv-btn--brand
+  position relative
+  border-radius 15px
+  background: linear-gradient(to bottom, rgba(207,87,87,1) 0%,rgba(207,87,87,1) 19%,rgba(200,81,81,1) 38%,rgba(182,66,66,1) 73%,rgba(180,64,64,1) 100%);
+  padding: 4px 20px
+
+  title 15px #ecefef
+  text-shadow: 0 1px 0 rgba(2,3,3,.25);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /*pattern*/
+  &:before
+    pattern .15
+    border-radius 15px
+
+  /*glare*/
+  &:after
+    pb(left top)
+    top 0
+    size 100% 50%
+    opacity: .6;
+    border-radius: 0 0 13px 13px / 0 0 15px 15px;
+    background-image: linear-gradient(bottom, rgba(255,255,255,.18) -25%, rgba(255,255,255,0) 125%);
+
+  &>*
+    position relative
+    z-index: 1;
+
+  &:hover
+    background-color: #e75656;
+    box-shadow: 0 1px 5px rgba(0,0,0,.13);
+    background-image: linear-gradient(top, rgba(255,255,255,.36) 19.5%, rgba(255,255,255,0) 80.5%);
+
+  &:active
+    background: #b44040;
+    box-shadow: inset 0 7px 7px rgba(0,0,0,.21);
+
+    &:after
+      display none
+
+
+
+/*--------------------------------------
+  Delete btn
+--------------------------------------*/
+.uv-btn--delete
+  position relative
+  text-hide()
+  display inline-block
+  size 26px
+  border #b4b4b4;
+  background-color: #dfdfdf;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15), inset 0 0 0 1px rgba(255,255,255,.5);
+  background-image: linear-gradient(top, #feffff -25%, rgba(255,255,255,0) 125%);
+
+  /*pattern*/
+  &:before
+    pb(left topp)
+    size 100%
+    pattern .1
+
+  /*image*/
+  &:after
+    p-ctr()
+    sprite $btn-delete
+
+  &:hover
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15), inset 0 0 0 1px rgba(255,255,255,.5);
+    background-image: linear-gradient(top, #feffff -25%, rgba(255,255,255,0) 125%);
+
+  &:active
+    background-color: #dfdfdf;
+    box-shadow: inset 0 4px 7px rgba(0,0,0,.12);

@@ -16,50 +16,224 @@
   <!--Analytics include-->	
   <link href="//www.google-analytics.com" rel="dns-prefetch">
   <link href="//ajax.googleapis.com" rel="dns-prefetch">
+  <!--FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Forum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <!--CSS include-->
   <link href="assets/css/marilyn-shop-styles.css" rel="stylesheet">
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDKjHiTQ94z3p3lENGxVRtNGggsdP6JqiQ&sensor=false"></script>
 </head>
 
 <body itemscope itemtype='http://schema.org/WebPage'>
 
 <!--HEADER start-->
 <header class="l-header">
-  <!--logo-->
-  <a class="logo" href="/" itemprop='url'>
-    <img src="assets/img/logo.png" alt="" itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
-    <span class="logo__hidden" itemprop="name"></span>
-  </a>
-  <!--navigation-->
-  <nav class="nav" role="navigation">
-    <a href="#" class="nav__link is-active"></a>
-    <a href="#" class="nav__link"></a>
-  </nav>
+  <div class="l-header__inner">
+    <!--logo-->
+    <a class="logo" href="/" itemprop='url'>
+      <img src="assets/img/logo.png" alt="" itemprop='logo' itemscope itemtype='http://schema.org/ImageObject'>
+      <span class="logo__hidden" itemprop="name"></span>
+    </a>
+    <div class="l-hLine--middle">
+      <!--address-->
+      <address class="address--compact">
+        <b class="address__phone">+7 (812) 035 6890</b>
+        <a class="address__email" href="#">название@домен.рф</a>
+      </address>
+      <!--cart-->
+      <div class="cart--S">
+        <div class="cart__main">
+          <h2 class="cart__title">Ваша корзина:</h2>
+          <p>Товаров: 12</p>
+          <p>Сумма: 134 500 руб.</p>
+        </div>
+        <a href="#" class="uv-btn--brand  cart__submit"><span>Оформить</span></a>
+      </div>
+    </div>
+  </div>
 </header>
 <!--HEADER end-->
+
+<!--navigation-->
+<nav class="project-nav" role="navigation">
+  <ul class="project-nav__list">
+    <li class="project-nav__list-item"><a href="#" class="project-nav__link">Главная</a></li>
+    <li class="project-nav__list-item"><a href="#" class="project-nav__link">Новости</a></li>
+    <li class="project-nav__list-item"><a href="#" class="project-nav__link">Каталог товаров</a></li>
+    <li class="project-nav__list-item"><a href="#" class="project-nav__link">Доставка и оплата</a></li>
+    <li class="project-nav__list-item"><a href="#" class="project-nav__link">Контакты</a></li>
+  </ul>
+</nav>
+<!--navigation end-->
 
 <!--MAIN start-->
 <main class="l-main">
 
-  <!--main column-->
-  <div class="l-main__column--primary">
+  <!--include "templates/article"-->
+  <!--include "templates/articles-list"-->
+  <!--include "templates/cart"-->
+  <!--include "templates/main"-->
+  <!--include "templates/product"-->
+  <!--include "templates/product-list"-->
+  <!--include "templates/purchase"-->
+  <!--include "templates/contacts"-->
+  <div class="l-main__inner">
 
-    <!--template: main page-->
-    <h1>Hello world</h1>
+    <!--sidebar-->
+    <aside class="l-column--secondary  sidebar">
+
+      <section class="sidebar__item  product-catalog">
+        <header>
+          <h2 class="sidebar__item__title">Каталог товаров</h2>
+        </header>
+        <ul>
+          <li><a href="#">Кожаные куртки</a></li>
+          <li><a href="#">Сумки</a></li>
+          <li><a href="#">Кожгалантерея</a></li>
+          <li><a href="#">Шубы</a></li>
+          <li>
+            <a href="#">Меховые жилетки</a>
+            <ul>
+              <li><a href="#">Меховые жилеты из шиншиллового кролика</a></li>
+              <li><a href="#" class="is-current">Меховые жилеты из черно-бурой лисы</a></li>
+              <li><a href="#">Меховые жилеты из рыжей лисы</a></li>
+              <li><a href="#">Норковые жилеты</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Ювелирные украшения</a></li>
+          <li><a href="#">Бижутерия</a></li>
+        </ul>
+
+      </section>
+
+      <section class="sidebar__item  news-preview">
+        <header>
+          <h2 class="sidebar__item__title">Новости</h2>
+        </header>
+        <ul>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+          <li>
+            <article class="news-preview__article">
+              <time>10 Мая 2014</time>
+              <h3 class="news-preview__article__title"><a href="#">Новые поступления меховых шуб из норки!</a></h3>
+            </article>
+          </li>
+        </ul>
+        <footer class="news-preview__footer">
+          <a href="#">Все новости</a>
+        </footer>
+      </section>
+
+    </aside>
+
+    <!--main column-->
+    <div class="l-column--primary">
+
+      <nav class="crumbs">
+        <ul class="l-hLine">
+          <li><a class="crumbs__link" href="#">Главная</a></li>
+          <li><a href="#">Хлебные крошки</a></li>
+          <li><a href="#">Текущий раздел</a></li>
+        </ul>
+      </nav>
+
+      <h2 class="main__title">Навигация по проекту</h2>
+
+      <ul style="font-size: 18px;">
+        <li><a href="article.html">Article</a></li>
+        <li><a href="articles-list.html">Articles list</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="main.html">Main</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="product-list.html">Product list</a></li>
+        <li><a href="purchase.html">Purchase</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+
+    </div>
 
   </div>
-  <!--end center column-->
-
-  <!--sidebar-->
-  <aside class="l-main__column--secondary"></aside>
-  <!--sidebar-->
 
 </main>
 <!--MAIN end-->
 
 <!--start FOOTER-->
 <footer class="l-footer">
-  <!--copyright-->
-  <small class="copyright"></small>
+
+  <div class="l-footer__inner">
+    <section class="l-footer__column  footer-nav">
+      <header>
+        <h2 class="footer-nav__title">Информация</h2>
+      </header>
+      <ul>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Таблица размеров</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </section>
+
+    <section class="l-footer__column  footer-nav">
+      <header>
+        <h2 class="footer-nav__title">Служба поддержки</h2>
+      </header>
+      <ul>
+        <li><a href="#">Связаться с нами</a></li>
+        <li><a href="#">Обмен и возврат товара</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </section>
+
+    <section class="l-footer__column  footer-nav">
+      <header>
+        <h2 class="footer-nav__title">Дополнительно</h2>
+      </header>
+      <ul>
+        <li><a href="#">Производители (бренды)</a></li>
+        <li><a href="#">Подарочные сертификаты</a></li>
+      </ul>
+    </section>
+
+    <section class="l-footer__column  footer-nav">
+      <header>
+        <h2 class="footer-nav__title">Новинки и акции</h2>
+      </header>
+      <ul>
+        <li><a href="#">Спецпредложения</a></li>
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Популярное</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="l-footer__inner">
+    <div class="l-footer__column">
+      <small class="copyright">© 2014 Marylin Shop</small>
+    </div>
+    <div class="l-footer__column">
+      <a href="#" class="address__email">название@домен.рф</a>
+    </div>
+    <div class="l-footer__column"></div>
+    <div class="l-footer__column">
+      <ul class="social-networks">
+        <li><a class="social-networks__link  social-networks__link--vk" href="#" title="Vk">Vk</a></li>
+        <li><a class="social-networks__link  social-networks__link--fb" href="#" title="Facebook">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <!-- end FOOTER -->
 
@@ -67,6 +241,7 @@
 
 <!--SCRIPTS  start-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 
 <script src="assets/js/marilyn-shop-plugins.min.js"></script>
 <script src="assets/js/marilyn-shop-components.min.js"></script>

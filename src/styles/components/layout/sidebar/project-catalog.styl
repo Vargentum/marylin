@@ -1,0 +1,26 @@
+.product-catalog
+  a
+    display block
+    @extend .link-decorated-reverse
+    title 17px $brand-c
+    padding: 5px 0
+
+    &:after
+      pb static
+      sprite $catalog-item-divider
+      margin: 10px auto 0
+
+  li:last-child a:after
+    display none
+
+  ul ul
+
+    a
+      font: $base-f-size $base-f
+      color $title-c
+
+      &:after
+        display none
+
+      &.is-current
+        color: #797f7f;

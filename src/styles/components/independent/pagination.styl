@@ -1,0 +1,22 @@
+.pagination
+  hLine middle 7px
+
+.pagination__list
+  @extend .pagination
+  margin-left: 0
+
+
+.pagination__btn
+  display block
+  width: 30px;
+  padding-left: 0
+  padding-right: 0
+  text-align: center;
+  ellipsis()
+
+  &.is-active
+    &,&:hover,&:focus
+      cursor: default;
+      font-weight: 700;
+      background: #b9b9b9;
+      box-shadow: inset 0 4px 7px rgba(0,0,0,.12);

@@ -5,56 +5,48 @@ html, button, input, select, textarea
   font-family: $base-f
   color: $base-font-c
 
-html
-  height: 100%
-
 body
-  height: 100%
   font-size: $base-f-size
   line-height: $base-f-height
   background-color: $body-c
+  img('bg-body.png')
 
-/*
 
-input:not([type=radio]):not([type=checkbox]), textarea
+input,textarea
   height: $input-h
   padding 0 10px
-  label &
-    display block
-    width: 100%
-    margin-bottom: 10px
+  font-size: 14px
+  font-weight: 700
+  border: #bababa;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.12);
 
-for $type in radio checkbox
-[type={$type}]{}
-*/
+  &:disabled
+    background-color: #f1f3f3;
+    color: #99a1a1;
+
+[type=checkbox],
+[type=radio]
+  size 14px
+  padding: 0
+  box-shadow: none
 
 textarea
+  padding-top: 5px
+  padding-bottom: 5px
   vertical-align: top
   resize: none
+  min-height: 100px
+  width: 100%;
 
 button
   border: none
   background-color: transparent
 
 
-label
-  display block
-  span
-    display block
-    margin-bottom: 2px
-
-
-
 a
-  color: $linkColor
-  text-decoration: underline
-  &:hover
-    color $hoveredLinkColor
-    text-decoration: none
+  color: $title-c
+  @extend .link-decorated
   &:focus
-    color $focusedLinkColor
-    outline: thin dotted
-  &:active
-    color $activeLinkColor
-  &:visited
-    color $visitedLinkColor
+    outline 1px dotted @color

@@ -13,11 +13,11 @@ module.exports = (grunt) ->
       app: "./app"
       temp: "./temp"
       assets: "<%= project.app %>/assets"
-      styles: "<%= project.src %>/styles/{,*/}*.styl"
-      components: "<%= project.src %>/scripts/components/{,*/}*.coffee"
-      plugins: "<%= project.src %>/scripts/plugins/{,*/}*.js"
-      views: "<%= project.src %>/views/{,*/}*.html"
-      sprites: "'<%= project.assets %>/img/sprite/{,*/}*.png'"
+      styles: "<%= project.src %>/styles/{,**/}*.styl"
+      components: "<%= project.src %>/scripts/components/{,**/}*.coffee"
+      plugins: "<%= project.src %>/scripts/plugins/{,**/}*.js"
+      views: "<%= project.src %>/views/{,**/}*.html"
+      sprites: "<%= project.assets %>/img/sprite/{,**/}*.png"
 
     tag:
       banner: "/*!\n" + " * <%= pkg.name %>\n" + " * <%= pkg.title %>\n" + " * @author <%= pkg.author %>\n" + " * <%= pkg.url %>\n" + " */\n"
@@ -55,11 +55,12 @@ module.exports = (grunt) ->
           "<%= project.src %>/styles/settings.styl"
           "<%= project.src %>/styles/base/mixins.styl"
           "<%= project.src %>/styles/base/sprite-map.styl"
+          "<%= project.src %>/styles/base/extends.styl"
           "<%= project.src %>/styles/base/fonts.styl"
           "<%= project.src %>/styles/base/reset.styl"
           "<%= project.src %>/styles/base/defaults.styl"
-          "<%= project.src %>/styles/base/extends.styl"
-          "<%= project.src %>/styles/components/{,*/}*.styl"
+          "<%= project.src %>/styles/base/layout.styl"
+          "<%= project.src %>/styles/components/{,**/}*.styl"
         ]
         dest: "<%= project.temp %>/temp-styles.styl"
 

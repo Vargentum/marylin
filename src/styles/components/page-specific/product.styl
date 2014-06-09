@@ -1,0 +1,280 @@
+/*--------------------------------------
+    Base product view
+--------------------------------------*/
+.product
+  position relative
+
+  b
+    font-weight: 700;
+
+
+.product__layout--l
+  width: 320px
+
+.product__layout--r
+  width: 360px
+
+
+.product__title
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+
+.product__size
+  margin: 15px 0 20px
+  hLine middle
+
+  label
+    font-weight: 700
+    hLine middle
+    margin-right: 15px
+
+  select
+    width: 50px
+    margin-left: 5px
+    font-weight: 700
+
+
+.product__params
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+  li
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+.product__price
+  display block
+  title 17px $base-font-c
+  font-weight: 700
+  text-shadow: 0 1px 0 rgba(255,255,255,.4);
+
+.product__share
+  hLine middle
+  margin-left: -15px
+
+  &>*
+    margin-left: 15px
+
+  a
+    display block
+
+$product-share-link-types = vk $product-sharing-vk,
+                            fb $product-sharing-fb,
+                            tw $product-sharing-tw,
+                            mm $product-sharing-mm,
+                            ya $product-sharing-ya,
+                            lj $product-sharing-lj
+
+for $each in $product-share-link-types
+  .product__share__link--{$each[0]}
+    sprite $each[1]
+
+
+.product__gallery
+
+  &>*
+    margin-bottom: 15px
+
+
+.product__gallery__photo
+  background-color: #fff
+  padding: 1px
+  box-shadow: 0 0 12px rgba(2,3,3,.15);
+
+  img
+    display block
+    size 100%
+
+
+.product__gallery__photo-list--L
+  position relative
+  size 320px 470px
+
+  .product__gallery__photo
+    absolute left top
+    size 100%
+    padding: 3px
+    trans opacity
+    opacity 0
+
+    &.is-active
+      opacity 1
+      z-index 1
+
+
+.product__gallery__photo-list--S
+  jLine()
+
+  .product__gallery__photo
+    size 100px
+    cursor pointer
+    trans box-shadow
+
+    &:hover
+      box-shadow none
+
+
+
+
+
+.product__tabs
+  margin: 15px 0
+
+.product__tabs__nav
+  hLine()
+  margin-left: -10px
+  margin-bottom: 15px
+
+  &>*
+    margin-left: 10px
+
+  a
+    display block
+    position relative
+    padding: 10px 30px
+    border #99a2a2
+    title 18px
+    text-decoration: none;
+
+    &:hover,&.current
+      color $base-font-c
+      border-color transparent
+      background-color: #fff
+
+      &:before
+        pb(left top)
+        pattern(.15)
+
+        .csscalc &
+          size calc(100% \- 6px)
+          margin: 3px
+
+        .no-csscalc &
+          size 100%
+
+/*--------------------------------------
+  Product Large view (at product page)
+--------------------------------------*/
+.product--L
+
+  .product__title
+    brand 32px
+    margin-bottom: 15px
+
+  .product__price
+    margin: 30px 0
+
+  .product__buy-btn
+    margin: 30px 0
+
+
+
+/*--------------------------------------
+  Product small view (at product-list page)
+--------------------------------------*/
+.product--S
+  position relative
+  margin-bottom: 20px
+  size 220px 480px
+  background-color: #fff
+  border 3px solid @background-color
+  text-align: center;
+  box-shadow: 0 0 12px rgba(2,3,3,.15);
+  trans box-shadow
+
+  &:before
+    pb(left top)
+    size 100%
+    pattern(.05)
+
+  &>*
+    position relative
+    z-index: 1;
+
+  .flexbox &
+    fLine space-between stretch
+    flex-direction column
+
+  &:hover
+    box-shadow none
+
+  .product__main
+    padding: 5px 0 15px
+
+    .flexbox &
+      flex 1
+      fLine space-between stretch
+      flex-direction column
+
+
+  .product__title
+    title 16px
+
+
+  .product__photo
+    size 100% auto
+    display block
+    border-bottom: 3px solid #fff
+
+  .product__footer
+    margin-top: -10px
+    &>*
+      margin-top: 10px
+
+
+  .uv-btn--brand
+    padding-left: 30px
+    padding-right: 30px
+
+
+
+/*--------------------------------------
+  Product in cart view (at cart page)
+--------------------------------------*/
+.product--in-cart
+
+  .product__photo
+    @extend .product__gallery__photo
+    @extend .product__gallery__photo-list--S .product__gallery__photo
+    display inline-block
+
+  .product__description
+    width: 330px
+    jLine middle
+
+  .product__description__main
+
+    .flexbox &
+      flex 1
+      padding-left: 10px
+
+    .no-flexbox &
+      width: (330px - 100px - 10px);
+
+  .product__price
+    font-size: 14px
+
+  .product__discount
+    @extend .product__price
+
+  .product__price--total
+    font-size: 17px
+
+  .product__quantity
+    color: #999;
+    padding-top: 3px
+
+    input
+      display block
+      margin-top: 5px
+      width: 60px
+      font-size: 14px
+      font-weight: 700
+
+/*--------------------------------------
+  product list
+--------------------------------------*/
+.product-list
+  hLine top 16px
+
